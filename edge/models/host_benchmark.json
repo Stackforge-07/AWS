@@ -1,0 +1,11 @@
+{
+  "measurement_target": "HOST CPU ONLY",
+  "host": "macOS-26.5.2-arm64-arm-64bit",
+  "samples": 1000,
+  "p50_ms": 0.001917,
+  "p95_ms": 0.002,
+  "model_size_bytes": 8336,
+  "mcu_latency_ms": null,
+  "tensor_arena_bytes": null,
+  "peak_ram_bytes": null
+}

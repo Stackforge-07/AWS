@@ -1,0 +1,893 @@
+============================================================
+1. OFFICIAL SIH26073 INPUT SCOPE — STRICT REQUIREMENT
+============================================================
+
+This project is for:
+
+SIH 2026
+Problem Statement: SIH26073
+Organization: Ministry of Earth Sciences (MoES)
+Department: India Meteorological Department
+
+The anomaly-detection intelligence MUST strictly follow the
+official problem statement.
+
+The ONLY meteorological parameters allowed as model inputs are:
+
+1. Temperature (°C)
+2. Atmospheric Pressure (hPa)
+3. Relative Humidity (%)
+
+These three variables form the complete meteorological input space
+for the anomaly-detection system.
+
+DO NOT require or use any additional environmental/weather variable
+for anomaly classification.
+
+Specifically, DO NOT use:
+
+- wind speed
+- wind direction
+- rainfall
+- precipitation
+- solar radiation
+- visibility
+- cloud cover
+- weather-code labels
+- satellite observations
+- radar observations
+- lightning observations
+- soil variables
+- air-quality variables
+- external weather forecasts
+- Numerical Weather Prediction variables
+- external forecast temperatures
+- external forecast pressure
+- external forecast humidity
+- or any other meteorological parameter outside T/P/RH.
+
+The platform must demonstrate that meaningful anomaly detection,
+sensor-fault identification, temporal reasoning, multivariate
+consistency analysis, spatial validation and sensor-health monitoring
+can be achieved from:
+
+Temperature
++
+Atmospheric Pressure
++
+Relative Humidity
+
+alone.
+
+============================================================
+1.1 STRUCTURAL / SYSTEM METADATA
+============================================================
+
+Operational metadata may exist only where required to identify,
+order, transmit and manage measurements.
+
+Examples include:
+
+station_id
+timestamp
+observation_id
+ingestion_timestamp
+sequence_number
+source/stream identifier
+communication status
+model/firmware version
+
+These are NOT meteorological predictors.
+
+They must not be treated as additional environmental variables.
+
+Timestamp may be used to:
+
+- maintain correct sequence
+- calculate elapsed time
+- build past-only temporal features
+- learn seasonal/time-of-day patterns
+
+Station identity may be used to:
+
+- maintain station-specific history
+- isolate station models/state
+- perform comparison with other AWS observations
+
+Communication metadata may be used only for:
+
+- missing-data detection
+- packet-loss detection
+- stale-data detection
+- communication-failure classification
+
+============================================================
+1.2 SPATIAL ANALYSIS
+============================================================
+
+The official problem statement explicitly expects temporal and
+spatial consistency reasoning.
+
+Spatial analysis must therefore compare the SAME THREE PARAMETERS
+across stations:
+
+Temperature
+Pressure
+Relative Humidity
+
+Example:
+
+Target AWS:
+T_target
+P_target
+RH_target
+
+Neighbour AWS 1:
+T_1
+P_1
+RH_1
+
+Neighbour AWS 2:
+T_2
+P_2
+RH_2
+
+Neighbour AWS 3:
+T_3
+P_3
+RH_3
+
+The system may evaluate:
+
+temperature agreement
+pressure tendency agreement
+humidity agreement
+temporal propagation
+regional consistency
+isolated deviation
+
+Do NOT introduce extra meteorological observations to improve the
+spatial result.
+
+============================================================
+1.3 CORE SCIENTIFIC CHALLENGE
+============================================================
+
+The system must answer:
+
+"Given only Temperature, Atmospheric Pressure and Relative Humidity,
+is this observation consistent with normal behaviour, genuine weather,
+or a sensor/data anomaly?"
+
+This is the central problem.
+
+Do not solve a broader weather-forecasting problem.
+
+Do not turn the system into a multi-source weather platform.
+
+Stay tightly aligned with SIH26073.
+
+============================================================
+2. ALLOWED PHYSICS-DERIVED FEATURES
+============================================================
+
+Physics-derived quantities ARE allowed because they are mathematically
+computed from the three official variables rather than obtained from
+additional sensors.
+
+They must be clearly labelled:
+
+DERIVED FROM T/P/RH
+
+They are not independent observations.
+
+Allowed examples include:
+
+From Temperature + Relative Humidity:
+
+- saturation vapour pressure
+- actual vapour pressure
+- dew point
+- dew-point depression
+- vapour pressure deficit
+
+From Temperature + Pressure + Relative Humidity:
+
+- mixing ratio
+- specific humidity
+- virtual temperature
+- approximate air density
+
+From Temperature + Pressure:
+
+- potential-temperature-like thermodynamic transforms
+  where scientifically appropriate
+
+From repeated Pressure observations:
+
+- pressure tendency
+- pressure rate of change
+- pressure acceleration
+
+From repeated Temperature observations:
+
+- temperature rate of change
+- temperature acceleration
+
+From repeated RH observations:
+
+- humidity rate of change
+
+These features provide additional REPRESENTATIONS of the official
+T/P/RH measurements.
+
+They must never be described as additional independent sensors.
+
+============================================================
+3. PHYSICS CONSISTENCY ENGINE
+============================================================
+
+Build the Physics Engine entirely around T/P/RH.
+
+Its purpose is:
+
+"Are Temperature, Pressure and Relative Humidity behaving together
+in a way that is consistent with this station's learned atmospheric
+behaviour?"
+
+Physics sub-engines:
+
+1. Moisture Physics Engine
+
+Inputs:
+T
+RH
+P where required
+
+Derive:
+
+saturation vapour pressure
+actual vapour pressure
+dew point
+dew-point depression
+VPD
+mixing ratio
+specific humidity
+
+2. Pressure Behaviour Engine
+
+Input:
+historical P
+
+Calculate:
+
+pressure tendency
+pressure rate of change
+pressure acceleration
+rolling pressure variability
+pressure change persistence
+
+3. Thermodynamic Representation Engine
+
+Inputs:
+T
+P
+RH
+
+Calculate useful physical transforms such as:
+
+virtual temperature
+air density
+potential-temperature representation
+
+4. Cross-Variable Consistency Engine
+
+Study whether changes in:
+
+T
+P
+RH
+
+and their derived representations are consistent with learned
+normal atmospheric relationships.
+
+5. Physics Residual Engine
+
+Convert physical inconsistencies into evidence scores.
+
+Example:
+
+PhysicsEvidence {
+    moisture_consistency
+    pressure_consistency
+    thermo_hygrometric_consistency
+    cross_variable_consistency
+    overall_physics_evidence
+}
+
+============================================================
+4. REMOVE NWP FROM THE CORE ARCHITECTURE
+============================================================
+
+Do NOT use NWP as an anomaly-detection input.
+
+Remove:
+
+NWPProvider
+OpenMeteoAdapter
+GFSAdapter
+ECMWFAdapter
+NWP support score
+NWP residual
+NWP forecast comparison
+
+The official SIH26073 problem must be solved using only T/P/RH.
+
+The project should therefore demonstrate that the distinction between
+genuine weather and sensor fault can be achieved through:
+
+- the target station's T/P/RH history
+- physics derived from T/P/RH
+- temporal consistency
+- seasonal patterns
+- multivariate relationships
+- neighbouring stations' T/P/RH
+- ML anomaly evidence
+
+without relying on external forecast products.
+
+============================================================
+5. REVISED VIRTUAL WEATHER TWIN
+============================================================
+
+Keep the Virtual Weather Twin.
+
+However, construct it ONLY from the official T/P/RH data.
+
+The Virtual Weather Twin should combine:
+
+1. Station temporal history
+2. Station seasonal patterns
+3. Physics-derived representations
+4. Multivariate T/P/RH relationships
+5. Trusted neighbouring stations' T/P/RH
+6. Statistical forecasting
+7. ML-based forecasting
+
+It must NOT use:
+
+NWP
+radar
+satellite
+rainfall
+wind
+radiation
+external forecast variables
+
+The Virtual Twin outputs:
+
+expected_temperature
+temperature_interval
+
+expected_pressure
+pressure_interval
+
+expected_relative_humidity
+humidity_interval
+
+twin_reliability
+
+source availability
+
+Example:
+
+REAL AWS
+
+Temperature:
+46.7°C
+
+Pressure:
+1003.2 hPa
+
+RH:
+44%
+
+VS
+
+VIRTUAL WEATHER TWIN
+
+Temperature:
+29.8 ± 1.4°C
+
+Pressure:
+1003.8 ± 1.2 hPa
+
+RH:
+48 ± 5%
+
+The Twin's evidence sources may be:
+
+Temporal Model          AVAILABLE
+Physics Engine          AVAILABLE
+Station Climatology     AVAILABLE
+Neighbour Stations      AVAILABLE
+ML Forecast             AVAILABLE
+
+Do not show NWP.
+
+============================================================
+6. REVISED GENUINE-WEATHER VS SENSOR-FAULT LOGIC
+============================================================
+
+Example A — Sensor fault:
+
+Target AWS:
+
+T:
+29 → 29.4 → 46.7°C
+
+P:
+stable
+
+RH:
+stable / inconsistent with change
+
+Target history:
+does not support the jump
+
+Physics:
+strong inconsistency
+
+Five nearby AWS:
+temperature remains 28–31°C
+
+Virtual Twin:
+expected 29.8°C
+
+Isolation Forest:
+strong anomaly
+
+Temporal forecast:
+strong residual
+
+Result:
+
+SENSOR_FAULT
+
+Root Cause:
+TEMPERATURE_SPIKE
+
+
+Example B — Genuine weather:
+
+Target AWS:
+
+Pressure:
+gradually falling
+
+RH:
+gradually increasing
+
+Temperature:
+changing coherently
+
+Nearby AWS:
+
+similar trends appear with realistic temporal lag
+
+Physics:
+
+T/P/RH relationships remain coherent
+
+Temporal model:
+
+unusual event detected
+
+Spatial network:
+
+regional support detected
+
+Result:
+
+GENUINE_WEATHER
+
+
+This distinction must be achieved WITHOUT external forecast variables.
+
+============================================================
+7. REVISED ML INPUT CONTRACT
+============================================================
+
+Raw meteorological model features must originate from:
+
+Temperature
+Pressure
+Relative Humidity
+
+Only.
+
+Derived ML features may include:
+
+T
+P
+RH
+
+ΔT
+ΔP
+ΔRH
+
+dT/dt
+dP/dt
+dRH/dt
+
+rolling median T/P/RH
+
+rolling MAD T/P/RH
+
+rolling variance T/P/RH
+
+robust Z T/P/RH
+
+EWMA T/P/RH
+
+CUSUM T/P/RH
+
+seasonal residual T/P/RH
+
+forecast residual T/P/RH
+
+dew point
+
+dew-point depression
+
+vapour pressure
+
+VPD
+
+specific humidity
+
+mixing ratio
+
+virtual temperature
+
+air-density representation
+
+potential-temperature representation
+
+multivariate residuals
+
+spatial T/P/RH residuals
+
+Virtual Twin T/P/RH residuals
+
+All derived features must ultimately trace back to:
+
+Temperature
+Pressure
+Relative Humidity.
+
+============================================================
+8. REVISED TINYML EDGE INPUT
+============================================================
+
+The EdgeGuard model must also follow the same constraint.
+
+Primary sequence:
+
+Temperature
+Pressure
+Relative Humidity
+
+Example:
+
+12 timestamps × 3 parameters
+
+T1 P1 RH1
+T2 P2 RH2
+...
+T12 P12 RH12
+
+Optionally add derived features calculated from those variables.
+
+Do NOT use:
+
+wind
+rain
+radiation
+external forecast
+location-dependent weather services
+
+Dense Autoencoder example:
+
+36 or compact derived input vector
+        ↓
+Dense 32
+        ↓
+Dense 8
+        ↓
+Dense 32
+        ↓
+Reconstruction
+
+The Edge Autoencoder learns normal T/P/RH patterns.
+
+============================================================
+9. REVISED SPATIAL ENGINE
+============================================================
+
+The spatial engine must reason using neighbouring AWS T/P/RH data.
+
+Possible evidence:
+
+Neighbour Temperature Median
+
+Neighbour Pressure Median
+
+Neighbour RH Median
+
+Target-vs-neighbour temperature residual
+
+Target-vs-neighbour pressure residual
+
+Target-vs-neighbour RH residual
+
+Neighbour temporal trend agreement
+
+Regional pressure tendency
+
+Regional humidity tendency
+
+Regional temperature tendency
+
+Do not enhance this using additional weather variables.
+
+Robustly exclude or down-weight neighbours already suspected to be
+faulty.
+
+============================================================
+10. REVISED EVIDENCE VECTOR
+============================================================
+
+Use:
+
+E_integrity
+
+E_edge
+
+E_temporal
+
+E_seasonal
+
+E_climatology
+
+E_forecast_TPRH
+
+E_isolation_forest
+
+E_sequence
+
+E_multivariate
+
+E_physics_moisture
+
+E_physics_pressure
+
+E_physics_thermodynamic
+
+E_spatial_TPRH
+
+E_virtual_twin
+
+E_weather_coherence
+
+REMOVE:
+
+E_NWP
+
+External weather evidence must not be required.
+
+============================================================
+11. UI CHANGES
+============================================================
+
+Keep the previously specified UI/UX exactly the same in visual style.
+
+However, all meteorological cards, graphs and map layers must remain
+within the official parameters.
+
+Primary station readings:
+
+Temperature
+Pressure
+Relative Humidity
+
+Do NOT show Wind Speed as a core sensor card.
+
+Do NOT show rainfall/radiation as core monitoring variables.
+
+Station detail cards should be:
+
+Temperature
+Pressure
+Relative Humidity
+
+Optional fourth card can be:
+
+Overall Sensor Health
+
+or
+
+Physics Consistency
+
+rather than another weather parameter.
+
+============================================================
+12. MAP LAYERS
+============================================================
+
+Allowed analytical layers:
+
+AWS Status
+
+Temperature
+
+Atmospheric Pressure
+
+Relative Humidity
+
+Sensor Health
+
+Incidents
+
+Physics Residual
+
+Virtual Twin Residual
+
+Communication Health
+
+Anomaly Density
+
+Evidence Strength
+
+Remove:
+
+wind layers
+rain layers
+external forecast layers
+NWP-difference layer
+
+============================================================
+13. ANALYTICS PAGE
+============================================================
+
+Environmental quality analysis should show:
+
+Temperature data quality
+
+Pressure data quality
+
+Relative Humidity data quality
+
+Do not introduce additional atmospheric variables.
+
+Other analytics remain:
+
+Detection Recall
+
+Precision
+
+F1
+
+False Alert Rate
+
+Extreme/Genuine Weather False Positive Rate
+
+Mean Time to Detect
+
+Station Availability
+
+Unknown/Abstention Rate
+
+Incident Resolution Time
+
+Model Calibration
+
+Latency
+
+Edge performance
+
+Sensor health
+
+============================================================
+14. SIMULATOR
+============================================================
+
+The weather simulator must create physically/contextually correlated:
+
+Temperature
+
+Pressure
+
+Relative Humidity
+
+Only.
+
+Do not generate wind/rain/radiation as inputs to the detection model.
+
+Simulate scenarios such as:
+
+Normal diurnal T/P/RH behaviour
+
+Seasonal changes
+
+Regional T/P/RH event
+
+Localized T/P/RH event
+
+Temperature spike
+
+Pressure spike
+
+Humidity spike
+
+Frozen T
+
+Frozen P
+
+Frozen RH
+
+Gradual T drift
+
+Gradual P drift
+
+Gradual RH drift
+
+Noise
+
+Offset
+
+Missing packets
+
+Communication outage
+
+Timestamp issues
+
+Faulty neighbour
+
+Multi-sensor fault
+
+Genuine regional event
+
+Ambiguous local event
+
+============================================================
+15. CENTRAL DESIGN PRINCIPLE
+============================================================
+
+The project should repeatedly demonstrate this statement:
+
+"SkyGuard solves SIH26073 using only the three meteorological
+parameters specified in the official problem statement:
+Temperature, Atmospheric Pressure and Relative Humidity."
+
+All higher-level intelligence is derived from these three streams.
+
+Temporal intelligence comes from their histories.
+
+Seasonal intelligence comes from their historical patterns.
+
+Physics intelligence comes from mathematical relationships among them.
+
+Multivariate intelligence comes from their joint behaviour.
+
+Spatial intelligence comes from comparing the same three parameters
+across AWS stations.
+
+TinyML learns normal sequences of these three parameters.
+
+The Virtual Weather Twin estimates their expected values.
+
+The fusion model combines evidence derived from these three parameters.
+
+This strict input discipline must be maintained throughout the
+entire architecture.

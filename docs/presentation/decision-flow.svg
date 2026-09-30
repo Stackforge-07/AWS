@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="500" viewBox="0 0 1500 500">
+  <rect width="1500" height="500" rx="28" fill="#ffffff"/>
+  <style>
+    .box{fill:#eaf4ff;stroke:#86b7e8;stroke-width:4}.last{fill:#e5f8f1;stroke:#58c9aa;stroke-width:4}.title{font:700 42px Arial;fill:#15385f}.copy{font:400 26px Arial;fill:#315a80}.arrow{stroke:#087ef5;stroke-width:10;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  </style>
+  <rect class="box" x="45" y="110" width="380" height="250" rx="26"/>
+  <rect class="box" x="560" y="110" width="380" height="250" rx="26"/>
+  <rect class="last" x="1075" y="110" width="380" height="250" rx="26"/>
+  <path class="arrow" d="M440 235h95l-25-22m25 22-25 22"/>
+  <path class="arrow" d="M955 235h95l-25-22m25 22-25 22"/>
+  <text class="title" x="235" y="185" text-anchor="middle">1. DETECT</text>
+  <text class="copy" x="235" y="245" text-anchor="middle">Is this reading</text>
+  <text class="copy" x="235" y="282" text-anchor="middle">unusual?</text>
+  <text class="title" x="750" y="185" text-anchor="middle">2. EXPLAIN</text>
+  <text class="copy" x="750" y="245" text-anchor="middle">History + peers</text>
+  <text class="copy" x="750" y="282" text-anchor="middle">+ T/P/RH checks</text>
+  <text class="title" x="1265" y="185" text-anchor="middle">3. REVIEW</text>
+  <text class="copy" x="1265" y="245" text-anchor="middle">Show the reason</text>
+  <text class="copy" x="1265" y="282" text-anchor="middle">before anyone acts</text>
+</svg>

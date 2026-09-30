@@ -1,0 +1,138 @@
+{
+  "pipeline_source_sha256": "fd9abadcb68ddbe9cfda53fc218f6ea3410aa238fafbe3f205355ec19db3f9e3",
+  "dataset": "synthetic-heldout-stations-v1",
+  "seed": [
+    817,
+    26074,
+    99021
+  ],
+  "real_data_validated": false,
+  "evaluation_kind": "Synthetic stress test, stations and chronology excluded from fitting",
+  "observations": 504,
+  "fault_precision": 0.8576271186440678,
+  "fault_recall": 0.8784722222222222,
+  "fault_f1": 0.8679245283018868,
+  "macro_f1": 0.6730599855860505,
+  "false_alert_rate": 0.0,
+  "weather_false_positive_rate": 0.0,
+  "abstention_rate": 0.05952380952380952,
+  "latency_ms": {
+    "p50": 4.026146023534238,
+    "p95": 4.189664381556213,
+    "p99": 4.365357772912829
+  },
+  "per_class": [
+    {
+      "class": "NORMAL",
+      "precision": 0.4444444444444444,
+      "recall": 1.0,
+      "f1": 0.6153846153846154,
+      "support": 72
+    },
+    {
+      "class": "GENUINE_WEATHER",
+      "precision": 0.8823529411764706,
+      "recall": 0.20833333333333334,
+      "f1": 0.33707865168539325,
+      "support": 72
+    },
+    {
+      "class": "SENSOR_FAULT",
+      "precision": 0.8116591928251121,
+      "recall": 0.8379629629629629,
+      "f1": 0.8246013667425968,
+      "support": 216
+    },
+    {
+      "class": "DATA_COMMS_ISSUE",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 72
+    },
+    {
+      "class": "BOTH_COMPLEX",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    },
+    {
+      "class": "UNKNOWN_REVIEW",
+      "precision": 1.0,
+      "recall": 0.4166666666666667,
+      "f1": 0.5882352941176471,
+      "support": 72
+    }
+  ],
+  "confusion_matrix": [
+    [
+      72,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      57,
+      15,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      33,
+      2,
+      181,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      72,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      42,
+      0,
+      0,
+      30
+    ]
+  ],
+  "class_order": [
+    "NORMAL",
+    "GENUINE_WEATHER",
+    "SENSOR_FAULT",
+    "DATA_COMMS_ISSUE",
+    "BOTH_COMPLEX",
+    "UNKNOWN_REVIEW"
+  ],
+  "probability_calibration": null,
+  "brier_score": null,
+  "edge_hardware_metrics": null,
+  "limitations": [
+    "Synthetic data only",
+    "No blinded real extreme-weather validation",
+    "No calibrated probabilities",
+    "BOTH_COMPLEX not covered in this evaluation",
+    "No model selection claim; baseline only"
+  ],
+  "artifact_sha256": "81de5d3bb82342b2441eb5a776e025bf8bc1c0f902203868f945fb429dd41657",
+  "python": "3.12.14"
+}

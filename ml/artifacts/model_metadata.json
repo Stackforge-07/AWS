@@ -1,0 +1,22 @@
+{
+  "version": "if-synthetic-1",
+  "seed": 26073,
+  "data_source": "correlated synthetic T/P/RH; no real AWS validation",
+  "training_rows": 5994,
+  "validation_rows": 1284,
+  "split": "earliest 70% train; following 15% validation; last 15% reserved; six training stations",
+  "thresholds": [
+    0.45291348906430834,
+    0.6316781602334786
+  ],
+  "sha256": "169d8b2cfbac811c188999fd57e732d1e6f93e6f7d397a980e63338f2124f113",
+  "python": "3.12.14",
+  "feature_schema": [
+    "rate_T_per_min",
+    "rate_P_per_min",
+    "rate_RH_per_min",
+    "forecast_residual_T",
+    "forecast_residual_P",
+    "forecast_residual_RH"
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "evaluation_kind": "Synthetic development holdout; disjoint station identities, dates and seed; not field validation",
+  "observations": 4032,
+  "station_count": 24,
+  "baseline": {
+    "observations": 4032,
+    "fault_precision": 1.0,
+    "fault_recall": 0.7769097222222222,
+    "fault_f1": 0.8744504152418173,
+    "macro_f1": 0.5691190810652993,
+    "false_alert_rate": 0.0,
+    "weather_false_positive_rate": 0.0,
+    "abstention_rate": 0.044890873015873016,
+    "latency_ms": {
+      "p50": 2.2899163886904716,
+      "p95": 2.464237483218312
+    },
+    "per_class": [
+      {
+        "class": "NORMAL",
+        "precision": 0.2835671342685371,
+        "recall": 0.9826388888888888,
+        "f1": 0.4401244167962675,
+        "support": 576
+      },
+      {
+        "class": "GENUINE_WEATHER",
+        "precision": 0.7230769230769231,
+        "recall": 0.08159722222222222,
+        "f1": 0.14664586583463338,
+        "support": 576
+      },
+      {
+        "class": "SENSOR_FAULT",
+        "precision": 1.0,
+        "recall": 0.6765046296296297,
+        "f1": 0.8070417673455299,
+        "support": 1728
+      },
+      {
+        "class": "DATA_COMMS_ISSUE",
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 576
+      },
+      {
+        "class": "BOTH_COMPLEX",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      {
+        "class": "UNKNOWN_REVIEW",
+        "precision": 0.9447513812154696,
+        "recall": 0.296875,
+        "f1": 0.45178335535006603,
+        "support": 576
+      }
+    ],
+    "confusion_matrix": [
+      [
+        566,
+        10,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        529,
+        47,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        496,
+        8,
+        1169,
+        0,
+        45,
+        10
+      ],
+      [
+        0,
+        0,
+        0,
+        576,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        405,
+        0,
+        0,
+        0,
+        0,
+        171
+      ]
+    ],
+    "class_order": [
+      "NORMAL",
+      "GENUINE_WEATHER",
+      "SENSOR_FAULT",
+      "DATA_COMMS_ISSUE",
+      "BOTH_COMPLEX",
+      "UNKNOWN_REVIEW"
+    ]
+  },
+  "candidate": {
+    "observations": 4032,
+    "fault_precision": 0.9984810126582279,
+    "fault_recall": 0.8559027777777778,
+    "fault_f1": 0.9217106800654359,
+    "macro_f1": 0.6885398676909341,
+    "false_alert_rate": 0.0,
+    "weather_false_positive_rate": 0.003472222222222222,
+    "abstention_rate": 0.04241071428571429,
+    "latency_ms": {
+      "p50": 3.552103997208178,
+      "p95": 3.8149957545101643
+    },
+    "per_class": [
+      {
+        "class": "NORMAL",
+        "precision": 0.32165109034267914,
+        "recall": 0.7170138888888888,
+        "f1": 0.44408602150537635,
+        "support": 576
+      },
+      {
+        "class": "GENUINE_WEATHER",
+        "precision": 0.6661129568106312,
+        "recall": 0.6961805555555556,
+        "f1": 0.6808149405772496,
+        "support": 576
+      },
+      {
+        "class": "SENSOR_FAULT",
+        "precision": 0.9984697781178271,
+        "recall": 0.7552083333333334,
+        "f1": 0.8599670510708401,
+        "support": 1728
+      },
+      {
+        "class": "DATA_COMMS_ISSUE",
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 576
+      },
+      {
+        "class": "BOTH_COMPLEX",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      {
+        "class": "UNKNOWN_REVIEW",
+        "precision": 1.0,
+        "recall": 0.296875,
+        "f1": 0.4578313253012048,
+        "support": 576
+      }
+    ],
+    "confusion_matrix": [
+      [
+        413,
+        163,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        172,
+        401,
+        2,
+        0,
+        1,
+        0
+      ],
+      [
+        294,
+        38,
+        1305,
+        0,
+        91,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        576,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        405,
+        0,
+        0,
+        0,
+        0,
+        171
+      ]
+    ],
+    "class_order": [
+      "NORMAL",
+      "GENUINE_WEATHER",
+      "SENSOR_FAULT",
+      "DATA_COMMS_ISSUE",
+      "BOTH_COMPLEX",
+      "UNKNOWN_REVIEW"
+    ]
+  },
+  "limitations": [
+    "Shared generator family with training",
+    "Controlled five-neighbor cohorts, not field station coverage",
+    "No mixed faults or live deployment validation",
+    "Fixed experiment; labels do not enter inputs",
+    "Historical archive benchmark is separate and remains unchanged"
+  ],
+  "model_sha256": "d24907067252f95fc4dbfba23877505d00f18478fff69f1479874744977b6984",
+  "pipeline_source_sha256": "54e35712705a981a84b223ba8fe4e21b3f873fa53643ff99a3565a08d532ed10"
+}

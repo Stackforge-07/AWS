@@ -1,0 +1,186 @@
+{
+  "observations": 12000,
+  "fault_precision": 1.0,
+  "fault_recall": 0.7507284382284383,
+  "fault_f1": 0.8576183739702089,
+  "macro_f1": 0.48774533387459096,
+  "false_alert_rate": 0.0,
+  "weather_false_positive_rate": 0.0,
+  "abstention_rate": 0.0,
+  "latency_ms": {
+    "p50": 4.021208034828305,
+    "p95": 4.265962180215865
+  },
+  "per_class": [
+    {
+      "class": "NORMAL",
+      "precision": 0.2605548854041013,
+      "recall": 1.0,
+      "f1": 0.4133971291866029,
+      "support": 1728
+    },
+    {
+      "class": "GENUINE_WEATHER",
+      "precision": 1.0,
+      "recall": 0.12617370892018778,
+      "f1": 0.22407503908285564,
+      "support": 1704
+    },
+    {
+      "class": "SENSOR_FAULT",
+      "precision": 1.0,
+      "recall": 0.6684108527131783,
+      "f1": 0.8012545011034964,
+      "support": 5160
+    },
+    {
+      "class": "DATA_COMMS_ISSUE",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 1704
+    },
+    {
+      "class": "BOTH_COMPLEX",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    },
+    {
+      "class": "UNKNOWN_REVIEW",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 1704
+    }
+  ],
+  "confusion_matrix": [
+    [
+      1728,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1489,
+      215,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1711,
+      0,
+      3449,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1704,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1704,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "class_order": [
+    "NORMAL",
+    "GENUINE_WEATHER",
+    "SENSOR_FAULT",
+    "DATA_COMMS_ISSUE",
+    "BOTH_COMPLEX",
+    "UNKNOWN_REVIEW"
+  ],
+  "isolation_forest": {
+    "scored": 12000,
+    "novelty_precision": 0.9913169319826338,
+    "novelty_recall": 0.46680295950155765,
+    "novelty_f1": 0.6347210272023297,
+    "threshold": 1.0,
+    "definition": "Novelty versus synthetic normal, includes weather and ambiguous perturbations; not fault classification"
+  },
+  "run_id": "archive-500-v1",
+  "dataset": "stored-synthetic-90day-archive",
+  "evaluation_kind": "Fixed-model chronological synthetic archive stress test",
+  "real_data_validated": false,
+  "station_count": 500,
+  "archive_observations": 1080000,
+  "history_samples_per_station": 48,
+  "test_samples_per_station": 24,
+  "started_from": "2026-09-18T09:00:00+00:00",
+  "test_start": "2026-09-20T09:00:00+00:00",
+  "test_end": "2026-09-21T08:00:00+00:00",
+  "pipeline_source_sha256": "fd9abadcb68ddbe9cfda53fc218f6ea3410aa238fafbe3f205355ec19db3f9e3",
+  "model_sha256": "169d8b2cfbac811c188999fd57e732d1e6f93e6f7d397a980e63338f2124f113",
+  "completed_at": "2026-09-22T12:12:52.573014+00:00",
+  "duration_seconds": 155.26980954105966,
+  "prediction_sha256": "45c07d673f5655f5d1fe0f7fe9e376d5cbe538398c419d56be62248e7b0588bc",
+  "scenarios": [
+    {
+      "scenario": "normal",
+      "samples": 1728,
+      "accuracy": 1.0
+    },
+    {
+      "scenario": "spike",
+      "samples": 1728,
+      "accuracy": 1.0
+    },
+    {
+      "scenario": "drift",
+      "samples": 1728,
+      "accuracy": 0.7725694444444444
+    },
+    {
+      "scenario": "freeze",
+      "samples": 1704,
+      "accuracy": 0.22652582159624413
+    },
+    {
+      "scenario": "weather",
+      "samples": 1704,
+      "accuracy": 0.12617370892018778
+    },
+    {
+      "scenario": "ambiguous",
+      "samples": 1704,
+      "accuracy": 0.0
+    },
+    {
+      "scenario": "invalid",
+      "samples": 1704,
+      "accuracy": 1.0
+    }
+  ],
+  "limitations": [
+    "Synthetic development test; not independent field validation",
+    "No retraining or threshold tuning in this run",
+    "Hourly archive versus 10-minute training cadence; frozen detector needs denser samples",
+    "Clean trusted reference neighbors are a controlled experiment assumption",
+    "One scenario per station; no BOTH_COMPLEX cases",
+    "Only 12,000 labeled test copies evaluated; full archive is not claimed to be scored",
+    "Shared synthetic generator with training; not an independent climate distribution"
+  ]
+}

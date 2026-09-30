@@ -1,0 +1,3530 @@
+[
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 60,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 61,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 62,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 63,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 64,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 65,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 66,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 67,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 68,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 69,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 70,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 71,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 72,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 73,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 74,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 75,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 76,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 77,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 78,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 79,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 80,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 81,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 82,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "normal",
+    "step": 83,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 60,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 61,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 62,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 63,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 64,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 65,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 66,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 67,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 68,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 69,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 70,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 71,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 72,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 73,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 74,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 75,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 76,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 77,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 78,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 79,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 80,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 81,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 82,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "spike",
+    "step": 83,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 60,
+    "truth": "SENSOR_FAULT",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 61,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 62,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 63,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 64,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 65,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 66,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 67,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 68,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 69,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 70,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 71,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 72,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 73,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 74,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 75,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 76,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 77,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 78,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 79,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 80,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 81,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 82,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "drift",
+    "step": 83,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 60,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 61,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 62,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 63,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 64,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 65,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 66,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 67,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 68,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 69,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 70,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 71,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 72,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 73,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 74,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 75,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 76,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 77,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 78,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 79,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 80,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 81,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 82,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "freeze",
+    "step": 83,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 60,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 61,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 62,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 63,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 64,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 65,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 66,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 67,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 68,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 69,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 70,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 71,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 72,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 73,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 74,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 75,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 76,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 77,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 78,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 79,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 80,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 81,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 82,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "weather",
+    "step": 83,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 60,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 61,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 62,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 63,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 64,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 65,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 66,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 67,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 68,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 69,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 70,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 71,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 72,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 73,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 74,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 75,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 76,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 77,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 78,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 79,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 80,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 81,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 82,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "ambiguous",
+    "step": 83,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 60,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 61,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 62,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 63,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 64,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 65,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 66,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 67,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 68,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 69,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 70,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 71,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 72,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 73,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 74,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 75,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 76,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 77,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 78,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 79,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 80,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 81,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 82,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 817,
+    "scenario": "invalid",
+    "step": 83,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 60,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 61,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 62,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 63,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 64,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 65,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 66,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 67,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 68,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 69,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 70,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 71,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 72,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 73,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 74,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 75,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 76,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 77,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 78,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 79,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 80,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 81,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 82,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "normal",
+    "step": 83,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 60,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 61,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 62,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 63,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 64,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 65,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 66,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 67,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 68,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 69,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 70,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 71,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 72,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 73,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 74,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 75,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 76,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 77,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 78,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 79,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 80,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 81,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 82,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "spike",
+    "step": 83,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 60,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 61,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 62,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 63,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 64,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 65,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 66,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 67,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 68,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 69,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 70,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 71,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 72,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 73,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 74,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 75,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 76,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 77,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 78,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 79,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 80,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 81,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 82,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "drift",
+    "step": 83,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 60,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 61,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 62,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 63,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 64,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 65,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 66,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 67,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 68,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 69,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 70,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 71,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 72,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 73,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 74,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 75,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 76,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 77,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 78,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 79,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 80,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 81,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 82,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "freeze",
+    "step": 83,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 60,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 61,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 62,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 63,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 64,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 65,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 66,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 67,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 68,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 69,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 70,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 71,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 72,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 73,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 74,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 75,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 76,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 77,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 78,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 79,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 80,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 81,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 82,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "weather",
+    "step": 83,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 60,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 61,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 62,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 63,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 64,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 65,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 66,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 67,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 68,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 69,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 70,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 71,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 72,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 73,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 74,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 75,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 76,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 77,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 78,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 79,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 80,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 81,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 82,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "ambiguous",
+    "step": 83,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 60,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 61,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 62,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 63,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 64,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 65,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 66,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 67,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 68,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 69,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 70,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 71,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 72,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 73,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 74,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 75,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 76,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 77,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 78,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 79,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 80,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 81,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 82,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 26074,
+    "scenario": "invalid",
+    "step": 83,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 60,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 61,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 62,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 63,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 64,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 65,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 66,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 67,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 68,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 69,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 70,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 71,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 72,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 73,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 74,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 75,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 76,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 77,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 78,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 79,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 80,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 81,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 82,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "normal",
+    "step": 83,
+    "truth": "NORMAL",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 60,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 61,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 62,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 63,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 64,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 65,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 66,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 67,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 68,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 69,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 70,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 71,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 72,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 73,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 74,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 75,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 76,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 77,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 78,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 79,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 80,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 81,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 82,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "spike",
+    "step": 83,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 60,
+    "truth": "SENSOR_FAULT",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 61,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 62,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 63,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 64,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 65,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 66,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 67,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 68,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 69,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 70,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 71,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 72,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 73,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 74,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 75,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 76,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 77,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 78,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 79,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 80,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 81,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 82,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "drift",
+    "step": 83,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 60,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 61,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 62,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 63,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 64,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 65,
+    "truth": "SENSOR_FAULT",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 66,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 67,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 68,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 69,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 70,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 71,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 72,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 73,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 74,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 75,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 76,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 77,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 78,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 79,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 80,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 81,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 82,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "freeze",
+    "step": 83,
+    "truth": "SENSOR_FAULT",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 60,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 61,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 62,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 63,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 64,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 65,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 66,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 67,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 68,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "GENUINE_WEATHER"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 69,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 70,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 71,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 72,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 73,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 74,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 75,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 76,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 77,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 78,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 79,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 80,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 81,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 82,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "weather",
+    "step": 83,
+    "truth": "GENUINE_WEATHER",
+    "prediction": "NORMAL"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 60,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 61,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 62,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 63,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 64,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 65,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 66,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 67,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 68,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 69,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "UNKNOWN_REVIEW"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 70,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 71,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 72,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 73,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 74,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 75,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 76,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 77,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 78,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 79,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 80,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 81,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 82,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "ambiguous",
+    "step": 83,
+    "truth": "UNKNOWN_REVIEW",
+    "prediction": "SENSOR_FAULT"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 60,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 61,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 62,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 63,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 64,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 65,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 66,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 67,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 68,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 69,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 70,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 71,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 72,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 73,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 74,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 75,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 76,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 77,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 78,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 79,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 80,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 81,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 82,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  },
+  {
+    "seed": 99021,
+    "scenario": "invalid",
+    "step": 83,
+    "truth": "DATA_COMMS_ISSUE",
+    "prediction": "DATA_COMMS_ISSUE"
+  }
+]

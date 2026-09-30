@@ -1,0 +1,22 @@
+{
+  "version": "if-regional-2",
+  "seed": 4811,
+  "training_rows": 6912,
+  "validation_rows": 1728,
+  "split": "24 training station identities; 6 disjoint validation identities; January 2026; 10-minute and hourly cadence",
+  "data_source": "regional-v4 synthetic normal T/P/RH",
+  "feature_schema": [
+    "rate_T_per_min",
+    "rate_P_per_min",
+    "rate_RH_per_min",
+    "forecast_residual_T",
+    "forecast_residual_P",
+    "forecast_residual_RH"
+  ],
+  "thresholds": [
+    0.4336117067529528,
+    0.643551578738118
+  ],
+  "sha256": "d24907067252f95fc4dbfba23877505d00f18478fff69f1479874744977b6984",
+  "real_data_validated": false
+}

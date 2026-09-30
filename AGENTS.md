@@ -1,0 +1,2 @@
+# SkyGuard continuation instructions
+Read WORK_LOG.md first, then docs/LIMITATIONS.md and README.md. Update WORK_LOG.md after meaningful changes and before ending work. The revised T/P/RH contract in references/tprh-revision.txt overrides the original brief. Never fake metrics or hardware measurements, use future samples for online features, overwrite raw observations, or represent derived physics as independent sensors. Keep all UI actions connected to actual state. Preserve local user changes.

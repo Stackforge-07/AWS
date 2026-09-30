@@ -1,0 +1,272 @@
+{"kind":"deck","id":"pr/znc68l","name":"Deck"}
+{"kind":"layout","layoutId":"a638aaa1-7c28-4eda-b287-3ddeda8c38c7","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"48e932e7-55be-4f0d-abcd-106862469681","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/lmy373","slide":1,"title":"OFF BY ONE","textShapes":15}
+{"kind":"textbox","id":"sh/hsbidove","slide":1,"text":"OFF BY ONE","textPreview":"OFF BY ONE","textChars":10,"textLines":1,"bbox":[44,27,190,27]}
+{"kind":"textbox","id":"sh/upkj29w3","slide":1,"text":"SKYGUARD","textPreview":"SKYGUARD","textChars":8,"textLines":1,"bbox":[250,22,730,52]}
+{"kind":"shape","id":"sh/83i10jex","slide":1,"bbox":[44,94,1192,2]}
+{"kind":"shape","id":"sh/tobi94vi","slide":1,"bbox":[0,682,1280,38]}
+{"kind":"textbox","id":"sh/610jy9wr","slide":1,"text":"SKYGUARD  /  SIH26073","textPreview":"SKYGUARD  /  SIH26073","textChars":21,"textLines":1,"bbox":[44,693,700,20]}
+{"kind":"textbox","id":"sh/72907edc","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1185,690,50,24]}
+{"kind":"textbox","id":"sh/kzihwzel","slide":1,"text":"Weather station data\nwith an explanation","textPreview":"Weather station data | with an explanation","textChars":40,"textLines":2,"bbox":[55,157,610,122]}
+{"kind":"textbox","id":"sh/l0ri54v6","slide":1,"text":"AI/ML-Based Intelligent Anomaly Detection\nfor Automatic Weather Stations (AWS)","textPreview":"AI/ML-Based Intelligent Anomaly Detection | for Automatic Weather Stations (AWS)","textChars":78,"textLines":2,"bbox":[57,303,590,80]}
+{"kind":"textbox","id":"sh/tkjm5gr6","slide":1,"text":"Problem statement 26073","textPreview":"Problem statement 26073","textChars":23,"textLines":1,"bbox":[57,428,560,35]}
+{"kind":"textbox","id":"sh/8jalcbal","slide":1,"text":"Disaster Management  •  Software\nTeam OFF BY ONE  •  ID 132195","textPreview":"Disaster Management  •  Software | Team OFF BY ONE  •  ID 132195","textChars":62,"textLines":2,"bbox":[57,478,580,72]}
+{"kind":"textbox","id":"sh/7ih4369g","slide":1,"text":"Working prototype with 500 simulated stations","textPreview":"Working prototype with 500 simulated stations","textChars":45,"textLines":1,"bbox":[57,588,580,35]}
+{"kind":"shape","id":"sh/6h83a1sv","slide":1,"bbox":[738,161,435,125]}
+{"kind":"textbox","id":"sh/kfql8rap","slide":1,"text":"AWS observations","textPreview":"AWS observations","textChars":16,"textLines":1,"bbox":[798,180,357,48]}
+{"kind":"textbox","id":"sh/jehkz694","slide":1,"text":"Temperature  •  Pressure  •  Humidity","textPreview":"Temperature  •  Pressure  •  Humidity","textChars":37,"textLines":1,"bbox":[758,223,395,59]}
+{"kind":"shape","id":"sh/yd8361sj","slide":1,"bbox":[738,342,435,128]}
+{"kind":"textbox","id":"sh/wrql4rad","slide":1,"text":"SkyGuard checks","textPreview":"SkyGuard checks","textChars":15,"textLines":1,"bbox":[798,361,357,48]}
+{"kind":"textbox","id":"sh/ovalkri9","slide":1,"text":"History, ML, physics and nearby stations","textPreview":"History, ML, physics and nearby stations","textChars":40,"textLines":1,"bbox":[758,404,395,62]}
+{"kind":"shape","id":"sh/pw3mdwzu","slide":1,"bbox":[955.5,286,0,56]}
+{"kind":"shape","id":"sh/2ts3ih0j","slide":1,"bbox":[738,526,435,111]}
+{"kind":"textbox","id":"sh/07algrid","slide":1,"text":"Evidence for the operator","textPreview":"Evidence for the operator","textChars":25,"textLines":1,"bbox":[798,545,357,48]}
+{"kind":"textbox","id":"sh/1sjm9wzy","slide":1,"text":"Likely cause and a clear review action","textPreview":"Likely cause and a clear review action","textChars":38,"textLines":1,"bbox":[758,588,395,45]}
+{"kind":"shape","id":"sh/e5s3eh07","slide":1,"bbox":[955.5,470,0,56]}
+{"kind":"image","id":"im/udwritob","slide":1,"name":"","alt":"Smart India Hackathon 2026","bbox":[1085,15,150,72]}
+{"kind":"image","id":"im/6943atsv","slide":1,"name":"","alt":"RadioTower","bbox":[756,179,30,30]}
+{"kind":"image","id":"im/mdk3y9cr","slide":1,"name":"","alt":"ScanSearch","bbox":[756,360,30,30]}
+{"kind":"image","id":"im/sjy18fap","slide":1,"name":"","alt":"ClipboardCheck","bbox":[756,544,30,30]}
+{"kind":"notes","id":"nt/lmy373","slide":1,"text":"Project scope: references/tprh-revision.txt; README.md. Demo network contains synthetic observations. No real IMD/AWS feed is connected. Team details carried from user presentation."}
+{"kind":"slide","id":"sl/fqe45g","slide":2,"title":"OFF BY ONE","textShapes":20}
+{"kind":"textbox","id":"sh/6p0rep0n","slide":2,"text":"OFF BY ONE","textPreview":"OFF BY ONE","textChars":10,"textLines":1,"bbox":[44,27,190,27]}
+{"kind":"textbox","id":"sh/tcrap4ze","slide":2,"text":"PROPOSED SOLUTION","textPreview":"PROPOSED SOLUTION","textChars":17,"textLines":1,"bbox":[250,22,730,52]}
+{"kind":"shape","id":"sh/fetsrehk","slide":2,"bbox":[44,94,1192,2]}
+{"kind":"textbox","id":"sh/edkri90z","slide":2,"text":"A sudden change may be weather, a sensor fault or a data-delivery problem.","textPreview":"A sudden change may be weather, a sensor fault or a data-delivery problem.","textChars":74,"textLines":1,"bbox":[44,112,1185,42]}
+{"kind":"shape","id":"sh/1gbatoza","slide":2,"bbox":[0,682,1280,38]}
+{"kind":"textbox","id":"sh/gf29kjip","slide":2,"text":"SKYGUARD  /  SIH26073","textPreview":"SKYGUARD  /  SIH26073","textChars":21,"textLines":1,"bbox":[44,693,700,20]}
+{"kind":"textbox","id":"sh/vip8fa10","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1185,690,50,24]}
+{"kind":"shape","id":"sh/ahgr650f","slide":2,"bbox":[44,275,228,170]}
+{"kind":"textbox","id":"sh/dwbm9sbi","slide":2,"text":"Reading","textPreview":"Reading","textChars":7,"textLines":1,"bbox":[104,294,150,48]}
+{"kind":"textbox","id":"sh/qtk3exsr","slide":2,"text":"A sudden change\nneeds a cause.","textPreview":"A sudden change | needs a cause.","textChars":30,"textLines":2,"bbox":[64,337,188,104]}
+{"kind":"shape","id":"sh/rut47itc","slide":2,"bbox":[327,187,250,150]}
+{"kind":"textbox","id":"sh/10bmdcbe","slide":2,"text":"Station history","textPreview":"Station history","textChars":15,"textLines":1,"bbox":[387,206,172,48]}
+{"kind":"textbox","id":"sh/exknixs3","slide":2,"text":"Check jumps, drift\nand stuck values.","textPreview":"Check jumps, drift | and stuck values.","textChars":36,"textLines":2,"bbox":[347,249,210,84]}
+{"kind":"shape","id":"sh/fyt4b2to","slide":2,"bbox":[327,394,250,164]}
+{"kind":"textbox","id":"sh/h4rm18ba","slide":2,"text":"Virtual Buddy","textPreview":"Virtual Buddy","textChars":13,"textLines":1,"bbox":[387,413,172,48]}
+{"kind":"textbox","id":"sh/x0j2543y","slide":2,"text":"Check related readings\nand trusted neighbours.","textPreview":"Check related readings | and trusted neighbours.","textChars":46,"textLines":2,"bbox":[347,456,210,98]}
+{"kind":"shape","id":"sh/wza1cz2t","slide":2,"bbox":[636,279,244,177]}
+{"kind":"textbox","id":"sh/ax8jap4n","slide":2,"text":"Combine clues","textPreview":"Combine clues","textChars":13,"textLines":1,"bbox":[696,298,166,48]}
+{"kind":"textbox","id":"sh/loj2943a","slide":2,"text":"Explain the likely cause\nand missing evidence.","textPreview":"Explain the likely cause | and missing evidence.","textChars":46,"textLines":2,"bbox":[656,341,204,111]}
+{"kind":"shape","id":"sh/kna1gj2p","slide":2,"bbox":[272,262,55,98]}
+{"kind":"shape","id":"sh/jm1k7el4","slide":2,"bbox":[272,360,55,116]}
+{"kind":"shape","id":"sh/ylsje9kj","slide":2,"bbox":[577,262,59,105.5]}
+{"kind":"shape","id":"sh/ts32do36","slide":2,"bbox":[577,367.5,59,108.5]}
+{"kind":"shape","id":"sh/8rulkj2l","slide":2,"bbox":[943,173,293,128]}
+{"kind":"textbox","id":"sh/rmd8rmxc","slide":2,"text":"Weather supported","textPreview":"Weather supported","textChars":17,"textLines":1,"bbox":[1003,192,215,48]}
+{"kind":"textbox","id":"sh/snmpkrex","slide":2,"text":"Keep the event visible.","textPreview":"Keep the event visible.","textChars":23,"textLines":1,"bbox":[963,235,253,62]}
+{"kind":"shape","id":"sh/dovqtwfi","slide":2,"bbox":[943,337,293,128]}
+{"kind":"textbox","id":"sh/fqd8v6xo","slide":2,"text":"Fault supported","textPreview":"Fault supported","textChars":15,"textLines":1,"bbox":[1003,356,215,48]}
+{"kind":"textbox","id":"sh/0rm9obe9","slide":2,"text":"Open a sensor or data incident.","textPreview":"Open a sensor or data incident.","textChars":31,"textLines":1,"bbox":[963,399,253,62]}
+{"kind":"shape","id":"sh/1svqxwfu","slide":2,"bbox":[943,501,293,128]}
+{"kind":"textbox","id":"sh/nux8z6xk","slide":2,"text":"Evidence uncertain","textPreview":"Evidence uncertain","textChars":18,"textLines":1,"bbox":[1003,520,215,48]}
+{"kind":"textbox","id":"sh/bat836po","slide":2,"text":"Ask an operator to review.","textPreview":"Ask an operator to review.","textChars":26,"textLines":1,"bbox":[963,563,253,62]}
+{"kind":"shape","id":"sh/a9k7a1oj","slide":2,"bbox":[880,237,63,130.5]}
+{"kind":"shape","id":"sh/xcbq5g7u","slide":2,"bbox":[880,367.5,63,33.5]}
+{"kind":"shape","id":"sh/wb2pcb69","slide":2,"bbox":[880,367.5,63,197.5]}
+{"kind":"textbox","id":"sh/ydk7elof","slide":2,"text":"Original readings remain intact; approved correction proposals are stored separately.","textPreview":"Original readings remain intact; approved correction proposals are stored separately.","textChars":85,"textLines":1,"bbox":[85,608,820,45]}
+{"kind":"image","id":"im/h4z2p4ni","slide":2,"name":"","alt":"Smart India Hackathon 2026","bbox":[1085,15,150,72]}
+{"kind":"image","id":"im/3i1c3ah4","slide":2,"name":"","alt":"Thermometer","bbox":[62,293,30,30]}
+{"kind":"image","id":"im/bmlw7ah0","slide":2,"name":"","alt":"History","bbox":[345,205,30,30]}
+{"kind":"image","id":"im/zalwbuhc","slide":2,"name":"","alt":"Network","bbox":[345,412,30,30]}
+{"kind":"image","id":"im/w7yhc325","slide":2,"name":"","alt":"Layers","bbox":[654,297,30,30]}
+{"kind":"image","id":"im/1sbi1c3u","slide":2,"name":"","alt":"CloudSun","bbox":[961,191,30,30]}
+{"kind":"image","id":"im/t4rixs3i","slide":2,"name":"","alt":"Wrench","bbox":[961,355,30,30]}
+{"kind":"image","id":"im/d0v29w32","slide":2,"name":"","alt":"UserRoundSearch","bbox":[961,519,30,30]}
+{"kind":"image","id":"im/s7a94bm9","slide":2,"name":"","alt":"ShieldCheck","bbox":[44,608,27,27]}
+{"kind":"notes","id":"nt/fqe45g","slide":2,"text":"Source: local pipeline implementation, README.md and docs/LIMITATIONS.md. This slide groups operational outcomes for explanation; the implementation retains six classes, shown on technical slide. Nearby-station evidence is conditional on sufficient trusted peers."}
+{"kind":"slide","id":"sl/ngr45l","slide":3,"title":"OFF BY ONE","textShapes":27}
+{"kind":"textbox","id":"sh/29s7qtgf","slide":3,"text":"OFF BY ONE","textPreview":"OFF BY ONE","textChars":10,"textLines":1,"bbox":[44,27,190,27]}
+{"kind":"textbox","id":"sh/pc3qloz6","slide":3,"text":"TECHNICAL APPROACH","textPreview":"TECHNICAL APPROACH","textChars":18,"textLines":1,"bbox":[250,22,730,52]}
+{"kind":"shape","id":"sh/bel8nyhw","slide":3,"bbox":[44,94,1192,2]}
+{"kind":"textbox","id":"sh/adcrutgr","slide":3,"text":"Each observation passes through validation, parallel checks and an explained decision.","textPreview":"Each observation passes through validation, parallel checks and an explained decision.","textChars":86,"textLines":1,"bbox":[44,112,1185,42]}
+{"kind":"shape","id":"sh/x03qp8z2","slide":3,"bbox":[0,682,1280,38]}
+{"kind":"textbox","id":"sh/czu9w3yh","slide":3,"text":"SKYGUARD  /  SIH26073","textPreview":"SKYGUARD  /  SIH26073","textChars":21,"textLines":1,"bbox":[44,693,700,20]}
+{"kind":"textbox","id":"sh/z2l8rih8","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1185,690,50,24]}
+{"kind":"shape","id":"sh/y1crydgn","slide":3,"bbox":[44,286,198,179]}
+{"kind":"textbox","id":"sh/90vu9wje","slide":3,"text":"Input","textPreview":"Input","textChars":5,"textLines":1,"bbox":[104,305,120,48]}
+{"kind":"textbox","id":"sh/mxkvy1k3","slide":3,"text":"T / P / RH\nStation ID + time\nHTTP or CSV","textPreview":"T / P / RH | Station ID + time | HTTP or CSV","textChars":40,"textLines":3,"bbox":[64,348,158,113]}
+{"kind":"shape","id":"sh/nydc761o","slide":3,"bbox":[282,286,206,179]}
+{"kind":"textbox","id":"sh/xovudgjq","slide":3,"text":"Validate","textPreview":"Validate","textChars":8,"textLines":1,"bbox":[342,305,128,48]}
+{"kind":"textbox","id":"sh/a14v21kz","slide":3,"text":"Time + schema\nLate / missing data\nSave originals","textPreview":"Time + schema | Late / missing data | Save originals","textChars":48,"textLines":3,"bbox":[302,348,166,113]}
+{"kind":"shape","id":"sh/b2dcb61k","slide":3,"bbox":[532,178,267,162]}
+{"kind":"textbox","id":"sh/lsfehgjm","slide":3,"text":"History + ML","textPreview":"History + ML","textChars":12,"textLines":1,"bbox":[592,197,189,48]}
+{"kind":"textbox","id":"sh/t8bu1gbq","slide":3,"text":"Past-only features\nSpikes, drift, flatlines\nIsolation Forest score","textPreview":"Past-only features | Spikes, drift, flatlines | Isolation Forest score","textChars":66,"textLines":3,"bbox":[552,240,227,96]}
+{"kind":"shape","id":"sh/sn2dsbu5","slide":3,"bbox":[532,401,267,162]}
+{"kind":"textbox","id":"sh/6lkvqlcf","slide":3,"text":"Physics + peers","textPreview":"Physics + peers","textChars":15,"textLines":1,"bbox":[592,420,189,48]}
+{"kind":"textbox","id":"sh/hcvu50b2","slide":3,"text":"T/P/RH consistency\nNearby trusted stations\nAvailable context only","textPreview":"T/P/RH consistency | Nearby trusted stations | Available context only","textChars":65,"textLines":3,"bbox":[552,463,227,96]}
+{"kind":"shape","id":"sh/gb2dwvuh","slide":3,"bbox":[851,282,179,180]}
+{"kind":"textbox","id":"sh/u9kvulcb","slide":3,"text":"Fuse","textPreview":"Fuse","textChars":4,"textLines":1,"bbox":[911,301,101,48]}
+{"kind":"textbox","id":"sh/xgrutwbi","slide":3,"text":"Weigh clues\nClassify cause\nGive reasons","textPreview":"Weigh clues | Classify cause | Give reasons","textChars":39,"textLines":3,"bbox":[871,344,139,114]}
+{"kind":"shape","id":"sh/wfitkrud","slide":3,"bbox":[1072,282,164,180]}
+{"kind":"textbox","id":"sh/nmps329g","slide":3,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[1132,301,86,48]}
+{"kind":"textbox","id":"sh/8ny9w7a1","slide":3,"text":"History\nIncidents\nReview actions","textPreview":"History | Incidents | Review actions","textChars":32,"textLines":3,"bbox":[1092,344,124,114]}
+{"kind":"shape","id":"sh/9o7a5crm","slide":3,"bbox":[242,375.5,40,0]}
+{"kind":"shape","id":"sh/apgryhs7","slide":3,"bbox":[488,259,44,116.5]}
+{"kind":"shape","id":"sh/vqpsr29s","slide":3,"bbox":[488,375.5,44,106.5]}
+{"kind":"shape","id":"sh/wry907ax","slide":3,"bbox":[799,259,52,113]}
+{"kind":"shape","id":"sh/xs7atcri","slide":3,"bbox":[799,372,52,110]}
+{"kind":"shape","id":"sh/qtcrmdsn","slide":3,"bbox":[1030,372,42,0]}
+{"kind":"textbox","id":"sh/bu5svi98","slide":3,"text":"OUTPUTS","textPreview":"OUTPUTS","textChars":7,"textLines":1,"bbox":[851,485,370,27]}
+{"kind":"textbox","id":"sh/7edg3ax0","slide":3,"text":"Healthy · Weather · Sensor fault\nData issue · Complex · Needs review","textPreview":"Healthy · Weather · Sensor fault | Data issue · Complex · Needs review","textChars":68,"textLines":2,"bbox":[851,518,378,67]}
+{"kind":"shape","id":"sh/6d4za5gf","slide":3,"bbox":[44,586,755,52]}
+{"kind":"textbox","id":"sh/sfmhcfyl","slide":3,"text":"SQLite: raw observations, decisions, review history and correction proposals","textPreview":"SQLite: raw observations, decisions, review history and correction proposals","textChars":76,"textLines":1,"bbox":[101,600,680,28]}
+{"kind":"textbox","id":"sh/u14zepgb","slide":3,"text":"React","textPreview":"React","textChars":5,"textLines":1,"bbox":[202,650,127,24]}
+{"kind":"textbox","id":"sh/g3mhgzyh","slide":3,"text":"Three.js","textPreview":"Three.js","textChars":8,"textLines":1,"bbox":[374,650,127,24]}
+{"kind":"textbox","id":"sh/25ozipgn","slide":3,"text":"FastAPI","textPreview":"FastAPI","textChars":7,"textLines":1,"bbox":[546,650,127,24]}
+{"kind":"textbox","id":"sh/1czy14v6","slide":3,"text":"Python","textPreview":"Python","textChars":6,"textLines":1,"bbox":[718,650,127,24]}
+{"kind":"textbox","id":"sh/zaxgzud0","slide":3,"text":"SQLite","textPreview":"SQLite","textChars":6,"textLines":1,"bbox":[890,650,127,24]}
+{"kind":"textbox","id":"sh/d8fyx4va","slide":3,"text":"scikit-learn","textPreview":"scikit-learn","textChars":12,"textLines":1,"bbox":[1062,650,127,24]}
+{"kind":"textbox","id":"sh/q5ofmpwj","slide":3,"text":"STACK","textPreview":"STACK","textChars":5,"textLines":1,"bbox":[44,650,90,24]}
+{"kind":"image","id":"im/xczu5ona","slide":3,"name":"","alt":"Smart India Hackathon 2026","bbox":[1085,15,150,72]}
+{"kind":"image","id":"im/fm5onydk","slide":3,"name":"","alt":"RadioTower","bbox":[62,304,30,30]}
+{"kind":"image","id":"im/3q5oridw","slide":3,"name":"","alt":"ListChecks","bbox":[300,304,30,30]}
+{"kind":"image","id":"im/jul4fedc","slide":3,"name":"","alt":"BrainCircuit","bbox":[550,196,30,30]}
+{"kind":"image","id":"im/ob29grel","slide":3,"name":"","alt":"Network","bbox":[550,419,30,30]}
+{"kind":"image","id":"im/0ni9cre9","slide":3,"name":"","alt":"Layers","bbox":[869,300,30,30]}
+{"kind":"image","id":"im/toz2143m","slide":3,"name":"","alt":"MonitorCheck","bbox":[1090,300,30,30]}
+{"kind":"image","id":"im/alwjipgn","slide":3,"name":"","alt":"Database","bbox":[61,598,28,28]}
+{"kind":"image","id":"im/kbelozyp","slide":3,"name":"","alt":"React logo","bbox":[170,646,24,24]}
+{"kind":"image","id":"im/y9wjmpgj","slide":3,"name":"","alt":"Three.js logo","bbox":[342,646,24,24]}
+{"kind":"image","id":"im/0fu1cfyl","slide":3,"name":"","alt":"FastAPI logo","bbox":[514,646,24,24]}
+{"kind":"image","id":"im/3a94riho","slide":3,"name":"","alt":"Python logo","bbox":[686,646,24,24]}
+{"kind":"image","id":"im/5cbmt8ze","slide":3,"name":"","alt":"SQLite logo","bbox":[858,646,24,24]}
+{"kind":"image","id":"im/v694ny1c","slide":3,"name":"","alt":"scikit-learn logo","bbox":[1030,646,24,24]}
+{"kind":"notes","id":"nt/ngr45l","slide":3,"text":"Architecture reflects backend/API, storage and frontend in README.md. All online features use current and past data. Isolation Forest trains on synthetic normal data. Evidence strength is uncalibrated. No NWP or external forecasts are implemented. Technology logo SVGs: docs/presentation/pitch/logos/SOURCES.md. Icons: lucide-react, ISC license."}
+{"kind":"slide","id":"sl/kdkolc","slide":4,"title":"OFF BY ONE","textShapes":20}
+{"kind":"textbox","id":"sh/i1cvapc7","slide":4,"text":"OFF BY ONE","textPreview":"OFF BY ONE","textChars":10,"textLines":1,"bbox":[44,27,190,27]}
+{"kind":"textbox","id":"sh/543ulkby","slide":4,"text":"FEASIBILITY & VIABILITY","textPreview":"FEASIBILITY & VIABILITY","textChars":23,"textLines":1,"bbox":[250,22,730,52]}
+{"kind":"shape","id":"sh/ve1cfadg","slide":4,"bbox":[44,94,1192,2]}
+{"kind":"textbox","id":"sh/udsv65cb","slide":4,"text":"A working software prototype with a defined path to field validation.","textPreview":"A working software prototype with a defined path to field validation.","textChars":69,"textLines":1,"bbox":[44,112,1185,42]}
+{"kind":"shape","id":"sh/h03uhkbm","slide":4,"bbox":[0,682,1280,38]}
+{"kind":"textbox","id":"sh/wfad8fu1","slide":4,"text":"SKYGUARD  /  SIH26073","textPreview":"SKYGUARD  /  SIH26073","textChars":21,"textLines":1,"bbox":[44,693,700,20]}
+{"kind":"textbox","id":"sh/7a1cbadk","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1185,690,50,24]}
+{"kind":"shape","id":"sh/m9sv25cz","slide":4,"bbox":[44,171,547,130]}
+{"kind":"textbox","id":"sh/5kzu5kfe","slide":4,"text":"Technical feasibility","textPreview":"Technical feasibility","textChars":21,"textLines":1,"bbox":[104,190,469,48]}
+{"kind":"textbox","id":"sh/ixova5g3","slide":4,"text":"Integrated map, reports and anomaly checks;\n500 simulated stations with historical observations.","textPreview":"Integrated map, reports and anomaly checks; | 500 simulated stations with historical observations.","textChars":96,"textLines":2,"bbox":[64,233,507,64]}
+{"kind":"shape","id":"sh/jyxc3axo","slide":4,"bbox":[44,321,547,130]}
+{"kind":"textbox","id":"sh/xwfu10fi","slide":4,"text":"Operational viability","textPreview":"Operational viability","textChars":21,"textLines":1,"bbox":[104,340,469,48]}
+{"kind":"textbox","id":"sh/atov65gr","slide":4,"text":"Open-source stack and existing T/P/RH inputs.\nDeployment and support costs need pilot measurement.","textPreview":"Open-source stack and existing T/P/RH inputs. | Deployment and support costs need pilot measurement.","textChars":98,"textLines":2,"bbox":[64,383,507,64]}
+{"kind":"shape","id":"sh/vuxczqxc","slide":4,"bbox":[317.5,301,0,20]}
+{"kind":"textbox","id":"sh/gradkzy1","slide":4,"text":"FAULT RECALL (%) · PAIRED SYNTHETIC TEST","textPreview":"FAULT RECALL (%) · PAIRED SYNTHETIC TEST","textChars":40,"textLines":1,"bbox":[44,473,560,32]}
+{"kind":"textbox","id":"sh/pwvmh03e","slide":4,"text":"4,032 observations · 24 unseen station identities · 7 scenarios","textPreview":"4,032 observations · 24 unseen station identities · 7 scenarios","textChars":63,"textLines":1,"bbox":[44,637,605,27]}
+{"kind":"textbox","id":"sh/ovml8vm9","slide":4,"text":"CHALLENGE","textPreview":"CHALLENGE","textChars":9,"textLines":1,"bbox":[660,167,245,30]}
+{"kind":"textbox","id":"sh/3ud4fqlo","slide":4,"text":"RESPONSE","textPreview":"RESPONSE","textChars":8,"textLines":1,"bbox":[975,167,255,30]}
+{"kind":"shape","id":"sh/2t436l43","slide":4,"bbox":[660,219,245,111]}
+{"kind":"textbox","id":"sh/g72l4vmx","slide":4,"text":"Limited real data","textPreview":"Limited real data","textChars":17,"textLines":1,"bbox":[720,238,167,48]}
+{"kind":"shape","id":"sh/f6t4bqlc","slide":4,"bbox":[966,219,270,111]}
+{"kind":"textbox","id":"sh/u5k32l4r","slide":4,"text":"Connect real AWS data.\nLabel events with experts.","textPreview":"Connect real AWS data. | Label events with experts.","textChars":49,"textLines":2,"bbox":[984,249,234,72]}
+{"kind":"shape","id":"sh/t4b29g3m","slide":4,"bbox":[905,274.5,61,0]}
+{"kind":"shape","id":"sh/s32l0bm1","slide":4,"bbox":[660,362,245,111]}
+{"kind":"textbox","id":"sh/ja903m14","slide":4,"text":"Weather recall: 9.72%","textPreview":"Weather recall: 9.72%","textChars":21,"textLines":1,"bbox":[720,381,167,48]}
+{"kind":"shape","id":"sh/kbi1cr2p","slide":4,"bbox":[966,362,270,111]}
+{"kind":"textbox","id":"sh/5cri5wja","slide":4,"text":"Expand weather cases.\nKeep human review.","textPreview":"Expand weather cases. | Keep human review.","textChars":40,"textLines":2,"bbox":[984,392,234,72]}
+{"kind":"shape","id":"sh/a5gj6xkn","slide":4,"bbox":[905,417.5,61,0]}
+{"kind":"shape","id":"sh/v6p0z218","slide":4,"bbox":[660,505,245,111]}
+{"kind":"textbox","id":"sh/x87i1cje","slide":4,"text":"Untested field performance","textPreview":"Untested field performance","textChars":26,"textLines":1,"bbox":[720,524,167,48]}
+{"kind":"shape","id":"sh/mhwj2xkr","slide":4,"bbox":[966,505,270,111]}
+{"kind":"textbox","id":"sh/nip0v21w","slide":4,"text":"Test new seasons/sites.\nMeasure errors and cost.","textPreview":"Test new seasons/sites. | Measure errors and cost.","textChars":48,"textLines":2,"bbox":[984,535,234,72]}
+{"kind":"shape","id":"sh/zupw7y5s","slide":4,"bbox":[905,560.5,61,0]}
+{"kind":"textbox","id":"sh/etgfeto7","slide":4,"text":"The benchmark uses simulated data. Field accuracy remains unproven.","textPreview":"The benchmark uses simulated data. Field accuracy remains unproven.","textChars":67,"textLines":1,"bbox":[660,647,575,26]}
+{"kind":"chart","id":"ch/5c72psz2","slide":4,"name":"","chartType":"bar","bbox":[44,510,540,116]}
+{"kind":"image","id":"im/dgjidwv2","slide":4,"name":"","alt":"Smart India Hackathon 2026","bbox":[1085,15,150,72]}
+{"kind":"image","id":"im/j25wridc","slide":4,"name":"","alt":"Laptop","bbox":[62,189,30,30]}
+{"kind":"image","id":"im/rq5wvido","slide":4,"name":"","alt":"Settings2","bbox":[62,339,30,30]}
+{"kind":"image","id":"im/2l0zuhwb","slide":4,"name":"","alt":"PlugZap","bbox":[678,237,30,30]}
+{"kind":"image","id":"im/hcf25kz2","slide":4,"name":"","alt":"CloudSun","bbox":[678,380,30,30]}
+{"kind":"image","id":"im/76dkzah0","slide":4,"name":"","alt":"Gauge","bbox":[678,523,30,30]}
+{"kind":"notes","id":"nt/kdkolc","slide":4,"text":"Measured values from ml/artifacts/evaluation_v2_comparison.json: 4,032 observations, 24 unseen station identities, 7 scenarios; fault recall 77.47% vs 85.76%; weather recall 9.72%. Same simulator family; not independent field validation. API and UI capabilities from README.md. No operating-cost or hardware-speed claims are made."}
+{"kind":"slide","id":"sl/90cqhg","slide":5,"title":"OFF BY ONE","textShapes":21}
+{"kind":"textbox","id":"sh/a1gv6pwj","slide":5,"text":"OFF BY ONE","textPreview":"OFF BY ONE","textChars":10,"textLines":1,"bbox":[44,27,190,27]}
+{"kind":"textbox","id":"sh/xo7e1kfu","slide":5,"text":"IMPACT & BENEFITS","textPreview":"IMPACT & BENEFITS","textChars":17,"textLines":1,"bbox":[250,22,730,52]}
+{"kind":"shape","id":"sh/jq9w3ux0","slide":5,"bbox":[44,94,1192,2]}
+{"kind":"textbox","id":"sh/ip0vapwf","slide":5,"text":"The operator can follow an alert through to a recorded action.","textPreview":"The operator can follow an alert through to a recorded action.","textChars":62,"textLines":1,"bbox":[44,112,1185,42]}
+{"kind":"shape","id":"sh/5sre54f6","slide":5,"bbox":[0,682,1280,38]}
+{"kind":"textbox","id":"sh/kridczel","slide":5,"text":"SKYGUARD  /  SIH26073","textPreview":"SKYGUARD  /  SIH26073","textChars":21,"textLines":1,"bbox":[44,693,700,20]}
+{"kind":"textbox","id":"sh/7u9w7exc","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1185,690,50,24]}
+{"kind":"shape","id":"sh/6t0ve9wr","slide":5,"bbox":[44,182,277,185]}
+{"kind":"textbox","id":"sh/xsbyxw7y","slide":5,"text":"Locate","textPreview":"Locate","textChars":6,"textLines":1,"bbox":[104,201,199,48]}
+{"kind":"textbox","id":"sh/ap0z2ho7","slide":5,"text":"Select a flagged station\non the India map.","textPreview":"Select a flagged station | on the India map.","textChars":42,"textLines":2,"bbox":[64,244,237,119]}
+{"kind":"shape","id":"sh/vq9gvmps","slide":5,"bbox":[349,182,277,185]}
+{"kind":"textbox","id":"sh/5wby1w7u","slide":5,"text":"Understand","textPreview":"Understand","textChars":10,"textLines":1,"bbox":[409,201,199,48]}
+{"kind":"textbox","id":"sh/itkz61oj","slide":5,"text":"Read its history, peer\ncomparison and explanation.","textPreview":"Read its history, peer | comparison and explanation.","textChars":50,"textLines":2,"bbox":[369,244,237,119]}
+{"kind":"shape","id":"sh/jutgz6p4","slide":5,"bbox":[321,274.5,28,0]}
+{"kind":"shape","id":"sh/sj2hcb6l","slide":5,"bbox":[654,182,277,185]}
+{"kind":"textbox","id":"sh/1grypgfa","slide":5,"text":"Decide","textPreview":"Decide","textChars":6,"textLines":1,"bbox":[714,201,199,48]}
+{"kind":"textbox","id":"sh/0fihgbyp","slide":5,"text":"Review the incident or\npropose a correction.","textPreview":"Review the incident or | propose a correction.","textChars":44,"textLines":2,"bbox":[674,244,237,119]}
+{"kind":"shape","id":"sh/fepgn6x4","slide":5,"bbox":[626,274.5,28,0]}
+{"kind":"shape","id":"sh/edgze1gj","slide":5,"bbox":[959,182,277,185]}
+{"kind":"textbox","id":"sh/o3ihkby1","slide":5,"text":"Trace","textPreview":"Trace","textChars":5,"textLines":1,"bbox":[1019,201,199,48]}
+{"kind":"textbox","id":"sh/ni9gr6xg","slide":5,"text":"Retain original readings\nand the decision history.","textPreview":"Retain original readings | and the decision history.","textChars":50,"textLines":2,"bbox":[979,244,237,119]}
+{"kind":"shape","id":"sh/2h0zilgv","slide":5,"bbox":[931,274.5,28,0]}
+{"kind":"textbox","id":"sh/587yhwz2","slide":5,"text":"EXPECTED BENEFITS","textPreview":"EXPECTED BENEFITS","textChars":17,"textLines":1,"bbox":[44,422,1160,36]}
+{"kind":"textbox","id":"sh/ahsn2ts3","slide":5,"text":"Station operators","textPreview":"Station operators","textChars":17,"textLines":1,"bbox":[93,477,330,35]}
+{"kind":"textbox","id":"sh/v2l4vy9o","slide":5,"text":"Less searching across screens;\nmore focused sensor investigations.","textPreview":"Less searching across screens; | more focused sensor investigations.","textChars":66,"textLines":2,"bbox":[44,528,380,70]}
+{"kind":"textbox","id":"sh/x43mx8ru","slide":5,"text":"Weather-data teams","textPreview":"Weather-data teams","textChars":18,"textLines":1,"bbox":[498,477,330,35]}
+{"kind":"textbox","id":"sh/i5cn6dsf","slide":5,"text":"Consistent evidence and quality flags\nfor reviewing suspect observations.","textPreview":"Consistent evidence and quality flags | for reviewing suspect observations.","textChars":73,"textLines":2,"bbox":[449,528,380,70]}
+{"kind":"textbox","id":"sh/k7u583a5","slide":5,"text":"Regional teams","textPreview":"Regional teams","textChars":14,"textLines":1,"bbox":[903,477,330,35]}
+{"kind":"textbox","id":"sh/583m18rq","slide":5,"text":"Station health and incident counts\nto identify recurring local issues.","textPreview":"Station health and incident counts | to identify recurring local issues.","textChars":70,"textLines":2,"bbox":[854,528,380,70]}
+{"kind":"shape","id":"sh/y983u9sv","slide":5,"bbox":[44,623,1192,38]}
+{"kind":"textbox","id":"sh/zah4netg","slide":5,"text":"Pilot measures: operator review time, missed faults, false alerts and maintenance follow-through.","textPreview":"Pilot measures: operator review time, missed faults, false alerts and maintenance follow-through.","textChars":97,"textLines":1,"bbox":[61,632,1160,26]}
+{"kind":"image","id":"im/9crmx032","slide":5,"name":"","alt":"Smart India Hackathon 2026","bbox":[1085,15,150,72]}
+{"kind":"image","id":"im/zu187e9k","slide":5,"name":"","alt":"MapPin","bbox":[62,200,30,30]}
+{"kind":"image","id":"im/ni18ve9g","slide":5,"name":"","alt":"ChartNoAxesCombined","bbox":[367,200,30,30]}
+{"kind":"image","id":"im/21o7qp8r","slide":5,"name":"","alt":"UserRoundCheck","bbox":[672,200,30,30]}
+{"kind":"image","id":"im/ipwjahwf","slide":5,"name":"","alt":"FileClock","bbox":[977,200,30,30]}
+{"kind":"image","id":"im/v25kf2x4","slide":5,"name":"","alt":"Wrench","bbox":[44,478,35,35]}
+{"kind":"image","id":"im/bet4jahg","slide":5,"name":"","alt":"ListChecks","bbox":[449,478,35,35]}
+{"kind":"image","id":"im/or25ovyp","slide":5,"name":"","alt":"MapPinned","bbox":[854,478,35,35]}
+{"kind":"notes","id":"nt/90cqhg","slide":5,"text":"Operational workflow is implemented in local UI/API per README.md and WORK_LOG.md. Benefits are expected outcomes to measure in a pilot, not quantified field savings. Maintenance scheduling and personnel management are not claimed as implemented."}
+{"kind":"slide","id":"sl/uv1v0w","slide":6,"title":"OFF BY ONE","textShapes":23}
+{"kind":"textbox","id":"sh/5cj6tk7m","slide":6,"text":"OFF BY ONE","textPreview":"OFF BY ONE","textChars":10,"textLines":1,"bbox":[44,27,190,27]}
+{"kind":"textbox","id":"sh/i9snip8b","slide":6,"text":"RESEARCH & REFERENCES","textPreview":"RESEARCH & REFERENCES","textChars":21,"textLines":1,"bbox":[250,22,730,52]}
+{"kind":"shape","id":"sh/sfupozqd","slide":6,"bbox":[44,94,1192,2]}
+{"kind":"textbox","id":"sh/dg36x47y","slide":6,"text":"Each source informed a specific part of the project.","textPreview":"Each source informed a specific part of the project.","textChars":52,"textLines":1,"bbox":[44,112,1185,42]}
+{"kind":"shape","id":"sh/qds7mp87","slide":6,"bbox":[0,682,1280,38]}
+{"kind":"textbox","id":"sh/relovups","slide":6,"text":"SKYGUARD  /  SIH26073","textPreview":"SKYGUARD  /  SIH26073","textChars":21,"textLines":1,"bbox":[44,693,700,20]}
+{"kind":"textbox","id":"sh/8jq5cfq9","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1185,690,50,24]}
+{"kind":"textbox","id":"sh/9kz6l0re","slide":6,"text":"SOURCE","textPreview":"SOURCE","textChars":6,"textLines":1,"bbox":[98,172,440,30]}
+{"kind":"textbox","id":"sh/5knytw3y","slide":6,"text":"HOW IT INFORMED SKYGUARD","textPreview":"HOW IT INFORMED SKYGUARD","textChars":24,"textLines":1,"bbox":[657,172,560,30]}
+{"kind":"textbox","id":"sh/3ylgrmls","slide":6,"text":"SIH26073 problem statement","textPreview":"SIH26073 problem statement","textChars":26,"textLines":1,"bbox":[99,215,478,30]}
+{"kind":"textbox","id":"sh/ixczy147","slide":6,"text":"AWS anomaly-detection need and scope","textPreview":"AWS anomaly-detection need and scope","textChars":36,"textLines":1,"bbox":[99,245,478,26]}
+{"kind":"shape","id":"sh/donyxg3u","slide":6,"bbox":[590,233,2,2]}
+{"kind":"shape","id":"sh/sneh4bmp","slide":6,"bbox":[634,233,2,2]}
+{"kind":"shape","id":"sh/rm5gv6l4","slide":6,"bbox":[592,234,42,0]}
+{"kind":"textbox","id":"sh/qlwz214j","slide":6,"text":"Defines the target users and T/P/RH task.","textPreview":"Defines the target users and T/P/RH task.","textChars":41,"textLines":1,"bbox":[657,224,577,50]}
+{"kind":"shape","id":"sh/1s7i1g36","slide":6,"bbox":[99,281,1135,1]}
+{"kind":"textbox","id":"sh/0v614zux","slide":6,"text":"IMD surface instrumentation","textPreview":"IMD surface instrumentation","textChars":27,"textLines":1,"bbox":[99,293,478,30]}
+{"kind":"textbox","id":"sh/lwfix4bi","slide":6,"text":"AWS measurements and monitoring","textPreview":"AWS measurements and monitoring","textChars":31,"textLines":1,"bbox":[99,323,478,26]}
+{"kind":"shape","id":"sh/yt4j2pcr","slide":6,"bbox":[590,311,2,2]}
+{"kind":"shape","id":"sh/zud0vutc","slide":6,"bbox":[634,311,2,2]}
+{"kind":"shape","id":"sh/8z618zut","slide":6,"bbox":[592,312,42,0]}
+{"kind":"textbox","id":"sh/90f214be","slide":6,"text":"Informs observation metadata and station context.","textPreview":"Informs observation metadata and station context.","textChars":49,"textLines":1,"bbox":[657,302,577,50]}
+{"kind":"shape","id":"sh/mxoj6pcn","slide":6,"bbox":[99,359,1135,1]}
+{"kind":"textbox","id":"sh/o3m1wfup","slide":6,"text":"WMO Guide No. 8","textPreview":"WMO Guide No. 8","textChars":15,"textLines":1,"bbox":[99,371,478,30]}
+{"kind":"textbox","id":"sh/p4vipkba","slide":6,"text":"Measurement methods and data quality","textPreview":"Measurement methods and data quality","textChars":36,"textLines":1,"bbox":[99,401,478,26]}
+{"kind":"shape","id":"sh/ri14vids","slide":6,"bbox":[590,389,2,2]}
+{"kind":"shape","id":"sh/6hs32dw7","slide":6,"bbox":[634,389,2,2]}
+{"kind":"shape","id":"sh/tkjmx8vi","slide":6,"bbox":[592,390,42,0]}
+{"kind":"textbox","id":"sh/sjal4nud","slide":6,"text":"Guides physical plausibility and quality checks.","textPreview":"Guides physical plausibility and quality checks.","textChars":48,"textLines":1,"bbox":[657,380,577,50]}
+{"kind":"shape","id":"sh/ju14rydg","slide":6,"bbox":[99,437,1135,1]}
+{"kind":"textbox","id":"sh/5gjmt8vm","slide":6,"text":"scikit-learn: Isolation Forest","textPreview":"scikit-learn: Isolation Forest","textChars":30,"textLines":1,"bbox":[99,449,478,30]}
+{"kind":"textbox","id":"sh/4val03e1","slide":6,"text":"Unsupervised anomaly detection","textPreview":"Unsupervised anomaly detection","textChars":30,"textLines":1,"bbox":[99,479,478,26]}
+{"kind":"shape","id":"sh/vqh4nydk","slide":6,"bbox":[590,467,2,2]}
+{"kind":"shape","id":"sh/up83utwz","slide":6,"bbox":[634,467,2,2]}
+{"kind":"shape","id":"sh/axs7yhsj","slide":6,"bbox":[592,468,42,0]}
+{"kind":"textbox","id":"sh/by187m94","slide":6,"text":"Supports the ML score alongside other evidence.","textPreview":"Supports the ML score alongside other evidence.","textChars":47,"textLines":1,"bbox":[657,458,577,50]}
+{"kind":"shape","id":"sh/czap0rap","slide":6,"bbox":[99,515,1135,1]}
+{"kind":"textbox","id":"sh/2ts7uhsn","slide":6,"text":"PMFBY WINDS / OpenStreetMap","textPreview":"PMFBY WINDS / OpenStreetMap","textChars":27,"textLines":1,"bbox":[99,527,478,30]}
+{"kind":"textbox","id":"sh/nu183m98","slide":6,"text":"Station maps and geographic detail","textPreview":"Station maps and geographic detail","textChars":34,"textLines":1,"bbox":[99,557,478,26]}
+{"kind":"shape","id":"sh/ovapwrad","slide":6,"bbox":[590,545,2,2]}
+{"kind":"shape","id":"sh/pwjq5wry","slide":6,"bbox":[634,545,2,2]}
+{"kind":"shape","id":"sh/e587qxsb","slide":6,"bbox":[592,546,42,0]}
+{"kind":"textbox","id":"sh/f6h8z29w","slide":6,"text":"Inspires zoom behaviour and location exploration.","textPreview":"Inspires zoom behaviour and location exploration.","textChars":49,"textLines":1,"bbox":[657,536,577,50]}
+{"kind":"textbox","id":"sh/hwr2l4fq","slide":6,"text":"Project evidence: reproducible evaluation artifact and recorded limitations accompany the prototype.","textPreview":"Project evidence: reproducible evaluation artifact and recorded limitations accompany the prototype.","textChars":100,"textLines":1,"bbox":[44,635,1192,30]}
+{"kind":"image","id":"im/q9gnmpwf","slide":6,"name":"","alt":"Smart India Hackathon 2026","bbox":[1085,15,150,72]}
+{"kind":"image","id":"im/vq9gbqx8","slide":6,"name":"","alt":"FileText","bbox":[49,220,31,31]}
+{"kind":"image","id":"im/zipg36x0","slide":6,"name":"","alt":"RadioTower","bbox":[49,298,31,31]}
+{"kind":"image","id":"im/0zudg7e1","slide":6,"name":"","alt":"BookOpen","bbox":[49,376,31,31]}
+{"kind":"image","id":"im/54jah8be","slide":6,"name":"","alt":"BrainCircuit","bbox":[49,454,31,31]}
+{"kind":"image","id":"im/q10ja9c3","slide":6,"name":"","alt":"MapPinned","bbox":[49,532,31,31]}
+{"kind":"notes","id":"nt/uv1v0w","slide":6,"text":"References:\nSIH problem statement supplied by user: references/tprh-revision.txt and original brief.\nIMD: https://mausam.imd.gov.in/imd_latest/contents/surface-met.php\nWMO: https://wmo.int/publication-series/guide-instruments-and-methods-of-observation-wmo-no-8\nscikit-learn: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html\nPMFBY: https://pmfby.gov.in/winds/weather\nOpenStreetMap: https://www.openstreetmap.org\nLocal evidence: ml/artifacts/evaluation_v2_comparison.json and docs/LIMITATIONS.md.\nVisual direction: user-supplied SIH reference screenshots (technical flow and feasibility slide)."}

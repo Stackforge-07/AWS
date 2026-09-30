@@ -1,0 +1,3879 @@
+You are acting as the Principal Software Architect, ML Engineer, Meteorological Data Engineer, TinyML/Embedded Engineer, Backend Engineer, Frontend Engineer, MLOps Engineer, Data Engineer, and Product Designer for an SIH 2026 project based on Problem Statement 26073.
+
+Your job is to architect and build a complete, production-oriented Automatic Weather Station anomaly intelligence platform.
+
+Do NOT build this as a generic hackathon dashboard.
+
+Do NOT build this as “Isolation Forest + charts”.
+
+Do NOT build this as a collection of disconnected ML models.
+
+The final platform must behave like a credible national weather-station operations and data-trust system.
+
+The core philosophy is:
+
+“Edge intelligence detects suspicious behaviour immediately. Central intelligence determines whether the suspicious behaviour is a genuine weather phenomenon, sensor fault, communication/data-quality problem, combined event, or an uncertain case requiring review.”
+
+The complete platform should be positioned as:
+
+SKYGUARD
+Automatic Weather Station Intelligence & Data Trust Platform
+
+============================================================
+0. EXISTING REFERENCES AND ASSETS
+============================================================
+
+Use all of the following as design/architecture references.
+
+A. Existing competitor/SIH repository research
+
+The ecosystem already contains many implementations using combinations of:
+
+- Isolation Forest
+- Autoencoders
+- LSTM Autoencoders
+- XGBoost
+- temporal rules
+- rolling Z-score
+- MAD
+- EWMA
+- CUSUM
+- SHAP
+- spatial neighbour checks
+- correction/imputation
+- sensor-health scores
+- FastAPI
+- React
+- Streamlit
+- synthetic anomaly generation
+
+Therefore simply using these components does NOT differentiate the solution.
+
+Our differentiation must come from:
+
+1. scientifically correct atmospheric physics
+2. edge TinyML
+3. sensor-fault vs genuine-weather discrimination
+4. spatial reasoning
+5. Virtual Weather Twin
+6. NWP/context validation
+7. calibrated confidence
+8. uncertainty handling
+9. immutable raw data
+10. safe correction
+11. station health and degradation
+12. realistic communication-failure handling
+13. actual benchmark artifacts
+14. high-quality operator UX
+15. reproducible system design
+
+B. Existing uploaded 3D map project
+
+There is an existing interactive 3D India map project.
+
+Reuse its architecture rather than rebuilding the map from scratch.
+
+It already contains useful concepts such as:
+
+- React
+- Vite
+- Three.js
+- React Three Fiber
+- Drei
+- state boundaries
+- satellite texture
+- state extrusion
+- smooth damping
+- camera fly-to
+- hover
+- orbit
+- zoom
+- state selection/elevation
+
+Transform it into the actual SkyGuard national AWS diagnostic map.
+
+C. UI/UX reference images
+
+The visual language must closely follow the supplied reference screens.
+
+The desired style is:
+
+- white / icy-blue interface
+- clean government/scientific operations center
+- light satellite terrain map
+- subtle glass panels
+- thin borders
+- soft shadows
+- navy typography
+- blue primary interaction color
+- restrained status colors
+- dense but readable information
+- polished enterprise dashboard
+- large 3D map as a central visual
+- compact charts
+- excellent spacing
+- minimal visual noise
+
+DO NOT switch to a generic dark cyberpunk theme.
+
+DO NOT use excessive neon.
+
+DO NOT use heavy gradients.
+
+DO NOT use fake “AI brain” graphics.
+
+DO NOT use glassmorphism so heavily that readability suffers.
+
+============================================================
+1. CORE PROBLEM
+============================================================
+
+The system monitors Automatic Weather Stations.
+
+The guaranteed/primary meteorological inputs are:
+
+- Temperature
+- Atmospheric Pressure
+- Relative Humidity
+
+Additional metadata may include:
+
+- station_id
+- timestamp
+- latitude
+- longitude
+- elevation
+- sampling cadence
+- sensor metadata
+- station metadata
+- sequence number
+- communication information
+- optional firmware/model version
+
+Optional environmental variables such as:
+
+- wind speed
+- wind direction
+- rainfall
+- radiation
+
+may exist in some deployments, but they MUST NOT be required by the core anomaly-detection system.
+
+The official core platform must still function with only:
+
+Temperature + Pressure + Relative Humidity.
+
+============================================================
+2. OPERATIONAL OUTPUT CLASSES
+============================================================
+
+The central platform must not output only:
+
+ANOMALY / NORMAL.
+
+Use the following operational states:
+
+NORMAL
+
+GENUINE_WEATHER
+
+SENSOR_FAULT
+
+DATA_COMMS_ISSUE
+
+BOTH_COMPLEX
+
+UNKNOWN_REVIEW
+
+Root cause must be stored separately from the high-level operational class.
+
+Possible root causes:
+
+SPIKE
+
+SUDDEN_DROP
+
+FROZEN_SENSOR
+
+STUCK_SENSOR
+
+STUCK_OFFSET
+
+GRADUAL_DRIFT
+
+EXCESSIVE_NOISE
+
+INTERMITTENT_FAULT
+
+MISSING_DATA
+
+STALE_DATA
+
+COMMUNICATION_FAILURE
+
+DUPLICATE_DATA
+
+OUT_OF_ORDER_DATA
+
+TIMESTAMP_ERROR
+
+MULTIVARIATE_INCONSISTENCY
+
+UNKNOWN_SENSOR_FAULT
+
+Do not force a prediction when evidence is insufficient.
+
+UNKNOWN_REVIEW is an important, intentional state.
+
+============================================================
+3. FUNDAMENTAL SYSTEM PRINCIPLES
+============================================================
+
+A. Raw observations are immutable.
+
+Never overwrite the original measurement.
+
+Always preserve:
+
+raw_value
+expected_value
+corrected_candidate
+corrected_lower_bound
+corrected_upper_bound
+correction_method
+correction_confidence
+correction_status
+
+B. No future leakage.
+
+Every online feature at time t must use only information available at or before t.
+
+Never use centered rolling windows.
+
+Never use future observations to score past observations.
+
+C. Time must be treated correctly.
+
+Do not assume fixed row intervals.
+
+Calculate rate of change using:
+
+ROC = (x_t - x_t-1) / Δt
+
+D. Unusual weather is not automatically a sensor fault.
+
+E. Sensor fault is not automatically determined by one model.
+
+F. Confidence must be scientifically meaningful.
+
+A weighted score is not automatically a probability.
+
+If probabilities are shown, calibrate them.
+
+Otherwise display:
+
+Evidence Strength
+
+instead of:
+
+Probability
+
+G. Raw data must never be deleted because it looks wrong.
+
+H. Explainability must describe actual evidence.
+
+Do not generate meaningless AI explanations disconnected from real model/rule outputs.
+
+I. ML complexity must be justified by measured improvement.
+
+J. Every displayed benchmark value must come from real evaluation artifacts.
+
+No hardcoded “91% F1” or “98% confidence” placeholders in final production/demo screens.
+
+============================================================
+4. COMPLETE SYSTEM ARCHITECTURE
+============================================================
+
+Build the architecture conceptually as:
+
+                     PHYSICAL AWS NETWORK
+                              │
+                              ▼
+                     EDGEGUARD TINYML
+                              │
+                ┌─────────────┴────────────┐
+                │                          │
+           Local screening           Local buffering
+                │                          │
+                └─────────────┬────────────┘
+                              │
+                         MQTT / HTTP
+                              │
+                              ▼
+                     INGESTION ADAPTER
+                              │
+                              ▼
+                    DATA INTEGRITY QC
+                              │
+                              ▼
+                    IMMUTABLE RAW STORE
+                              │
+                              ▼
+                    CAUSAL FEATURE ENGINE
+                              │
+        ┌─────────────────────┼──────────────────────┐
+        ▼                     ▼                      ▼
+   PHYSICS ENGINE        TEMPORAL ENGINE       CLIMATOLOGY
+        │                     │                      │
+        ├──────────────┐      │       ┌──────────────┤
+        ▼              ▼      ▼       ▼              ▼
+ MULTIVARIATE       IF/ML   FORECAST  TTM       SEQUENCE MODEL
+        │                              │
+        └───────────────────┬──────────┘
+                            ▼
+                     SPATIAL ENGINE
+                            │
+                            ▼
+                       NWP CONTEXT
+                            │
+                            ▼
+                 VIRTUAL WEATHER TWIN
+                            │
+               REAL AWS  VS EXPECTED AWS
+                            │
+                            ▼
+                      RESIDUAL ENGINE
+                            │
+                            ▼
+                     EVIDENCE VECTOR
+                            │
+                            ▼
+                  TRUST FUSION ENGINE
+                            │
+                            ▼
+                  PROBABILITY CALIBRATION
+                            │
+                            ▼
+                  CONFORMAL UNCERTAINTY
+                            │
+      ┌─────────────────────┼────────────────────────┐
+      ▼                     ▼                        ▼
+    NORMAL             GENUINE WEATHER              FAULT
+                              │                       │
+                              │                   ROOT CAUSE
+                              │                       │
+                              └──────────┬────────────┘
+                                         ▼
+                                  SAFE CORRECTION
+                                         │
+                                         ▼
+                                   SENSOR HEALTH
+                                         │
+                                         ▼
+                                MAINTENANCE ENGINE
+                                         │
+                                         ▼
+                                  INCIDENT ENGINE
+                                         │
+                                         ▼
+                           NATIONAL OPERATIONS UI
+
+============================================================
+5. EDGEGUARD — TINYML EDGE INTELLIGENCE
+============================================================
+
+Create a dedicated EdgeGuard subsystem.
+
+The purpose of EdgeGuard is NOT to make the final authoritative distinction between genuine weather and sensor fault.
+
+Its job is:
+
+“Does this station’s current behaviour look suspicious compared with the patterns it has learned locally?”
+
+The edge should classify only:
+
+EDGE_NORMAL
+
+EDGE_SUSPICIOUS
+
+EDGE_CRITICAL
+
+The central platform performs final diagnosis.
+
+------------------------------------------------------------
+5.1 Edge components
+------------------------------------------------------------
+
+Run lightweight components directly on the microcontroller:
+
+- hard validation rules
+- rate-of-change detection
+- EWMA
+- small CUSUM
+- flatline/frozen detector
+- packet/timing checks
+- lightweight physics-derived variables
+- INT8 Dense Autoencoder
+
+------------------------------------------------------------
+5.2 Tiny Dense Autoencoder
+------------------------------------------------------------
+
+Use TensorFlow Lite Micro.
+
+Target realistic embedded boards such as:
+
+ESP32-S3
+
+STM32-class MCU
+
+or equivalent.
+
+Use a small historical window rather than only one sample.
+
+Example:
+
+12 timestamps × 3 variables
+=
+36 values
+
+Optionally add compact derivatives:
+
+ΔT
+ΔP
+ΔRH
+pressure tendency
+vapour pressure
+
+A possible architecture:
+
+72
+↓
+Dense 32
+ReLU
+↓
+Dense 8
+bottleneck
+↓
+Dense 32
+ReLU
+↓
+Dense 72
+
+Train primarily on trusted normal behaviour.
+
+Use reconstruction error:
+
+MSE = mean((x - reconstructed_x)^2)
+
+Do not hardcode arbitrary thresholds.
+
+Determine reconstruction threshold from validation behaviour.
+
+Possible strategy:
+
+99th / 99.5th percentile of normal reconstruction error
+
+or
+
+threshold optimized against validation precision/recall.
+
+------------------------------------------------------------
+5.3 Quantization
+------------------------------------------------------------
+
+Perform full INT8 quantization using a representative dataset.
+
+Measure real:
+
+model binary size
+peak RAM
+tensor arena
+inference latency
+flash usage
+power if practical
+
+Do NOT invent model-size or latency values.
+
+------------------------------------------------------------
+5.4 Edge data transmission
+------------------------------------------------------------
+
+Transmit:
+
+station_id
+
+timestamp
+
+temperature
+
+pressure
+
+relative_humidity
+
+edge_state
+
+edge_anomaly_score
+
+reconstruction_error
+
+rate_of_change features
+
+flatline flags
+
+communication state
+
+edge firmware version
+
+edge model version
+
+------------------------------------------------------------
+5.5 Offline resilience
+------------------------------------------------------------
+
+If cloud connectivity disappears:
+
+sensor polling continues
+
+TinyML inference continues
+
+local QC continues
+
+critical events continue to be detected
+
+data is stored in a circular buffer
+
+When the connection returns:
+
+buffered observations are uploaded
+
+cloud re-processes them
+
+incidents are reconstructed from original timestamps
+
+Demonstrate this in SIH.
+
+============================================================
+6. INGESTION ARCHITECTURE
+============================================================
+
+Create a canonical Observation schema.
+
+Example:
+
+Observation {
+    observation_id
+    station_id
+    timestamp_utc
+
+    temperature_c
+    pressure_hpa
+    relative_humidity_pct
+
+    ingestion_timestamp
+
+    source
+    sequence_number optional
+
+    edge_state optional
+    edge_anomaly_score optional
+    edge_model_version optional
+
+    quality_metadata
+}
+
+Create adapters:
+
+CSVReplayAdapter
+
+RESTAdapter
+
+WebSocketAdapter
+
+SimulatorAdapter
+
+MQTTAdapter
+
+FutureIMDAdapter
+
+Do not couple downstream ML logic to a transport protocol.
+
+============================================================
+7. DATA INTEGRITY ENGINE
+============================================================
+
+Detect:
+
+schema violation
+
+non-numeric fields
+
+NaN
+
+Infinity
+
+duplicate observations
+
+duplicate timestamps
+
+future timestamps outside tolerance
+
+out-of-order packets
+
+unexpected sampling interval
+
+sequence gaps
+
+stale observations
+
+missing runs
+
+station stopped transmitting
+
+Communication failures require a heartbeat process because no observation may arrive at all.
+
+Maintain:
+
+expected_sample_interval
+
+last_seen
+
+last_sequence
+
+current_delay
+
+missing_run_length
+
+station_online_state
+
+============================================================
+8. PHYSICS CONSISTENCY ENGINE
+============================================================
+
+Physics must be a FIRST-CLASS layer.
+
+Do not treat physics as a small optional feature.
+
+The goal is not to claim that derived values are independent sensors.
+
+The goal is to transform T/P/RH into physically meaningful atmospheric representations and determine whether observed behaviour is internally and contextually coherent.
+
+Create five physics sub-engines:
+
+1. Thermo-Hygrometric Engine
+2. Pressure Physics Engine
+3. Hydrostatic/Elevation Engine
+4. Atmospheric State Engine
+5. Physics Residual Engine
+
+============================================================
+8.1 Saturation vapour pressure
+============================================================
+
+From temperature:
+
+e_s(T) = 6.112 * exp((17.67*T)/(T+243.5))
+
+Use appropriate units.
+
+============================================================
+8.2 Actual vapour pressure
+============================================================
+
+e = RH/100 * e_s(T)
+
+============================================================
+8.3 Dew point
+============================================================
+
+Calculate dew point using a Magnus-type formulation.
+
+Also calculate:
+
+dew point depression:
+
+DPD = T - Td
+
+Do not describe calculated dew point as an independent sensor.
+
+============================================================
+8.4 Vapour pressure deficit
+============================================================
+
+VPD = e_s - e
+
+============================================================
+8.5 Mixing ratio
+============================================================
+
+w = 0.622 * e / (P - e)
+
+============================================================
+8.6 Specific humidity
+============================================================
+
+q = 0.622e / (P - 0.378e)
+
+============================================================
+8.7 Virtual temperature
+============================================================
+
+T_v = T_K * (1 + 0.61q)
+
+============================================================
+8.8 Air density
+============================================================
+
+rho = P / (R_d * T_v)
+
+Use consistent SI units.
+
+============================================================
+8.9 Potential temperature
+============================================================
+
+theta =
+T_K * (P0/P)^(R_d/c_p)
+
+with an appropriate standard reference pressure.
+
+============================================================
+8.10 Pressure tendency
+============================================================
+
+Compute:
+
+dP/dt
+
+and optionally:
+
+d²P/dt²
+
+Pressure tendency can be more useful than absolute pressure alone for weather propagation.
+
+============================================================
+8.11 Elevation-aware pressure comparison
+============================================================
+
+Never compare raw pressure blindly across stations with significantly different elevation.
+
+Use:
+
+station elevation
+temperature context
+pressure reference metadata
+
+Determine whether pressure is:
+
+station pressure
+mean sea level pressure
+another reference
+
+Normalize appropriately before spatial comparison.
+
+============================================================
+8.12 Hard physics vs soft physics
+============================================================
+
+Hard constraints may include:
+
+invalid RH representation
+impossible data encoding
+NaN
+corrupted pressure values
+
+Soft constraints should produce evidence rather than automatic rejection.
+
+Example:
+
+Temperature jumps dramatically,
+RH remains unchanged,
+implied moisture changes strongly,
+pressure unchanged,
+nearby stations show no similar behaviour.
+
+Output:
+
+high physics inconsistency evidence
+
+not:
+
+“physically impossible”
+
+unless it truly violates a hard constraint.
+
+============================================================
+8.13 Physics evidence groups
+============================================================
+
+Do not double-count correlated derived features.
+
+Group them into:
+
+Moisture Physics
+
+Pressure Physics
+
+Thermodynamic State
+
+Hydrostatic/Elevation
+
+Cross-variable consistency
+
+Produce one normalized evidence score per group.
+
+============================================================
+9. CAUSAL FEATURE ENGINE
+============================================================
+
+Maintain station-specific rolling state.
+
+Features can include:
+
+current T/P/RH
+
+delta
+
+rate of change
+
+rate-of-change acceleration
+
+rolling median
+
+rolling mean
+
+rolling min
+
+rolling max
+
+rolling MAD
+
+rolling std
+
+rolling variance
+
+robust Z-score
+
+ordinary Z-score where useful
+
+EWMA
+
+CUSUM positive
+
+CUSUM negative
+
+flatline duration
+
+run length
+
+time since previous observation
+
+missing duration
+
+hour sin/cos
+
+day-of-year sin/cos
+
+climatology residual
+
+temporal prediction residual
+
+physics residuals
+
+spatial residuals
+
+NWP residuals
+
+Virtual Twin residuals
+
+All features must be past-only.
+
+============================================================
+10. ROBUST TEMPORAL ENGINE
+============================================================
+
+Implement:
+
+MAD
+
+robust Z-score
+
+EWMA
+
+CUSUM
+
+persistence
+
+flatline detection
+
+variance collapse
+
+noise increase
+
+change-point detection
+
+Use elapsed time rather than row count for frozen sensors.
+
+============================================================
+11. STATION-ADAPTIVE CLIMATOLOGY
+============================================================
+
+Learn what is normal for each station.
+
+Condition expected behaviour on:
+
+station
+
+season
+
+month
+
+day-of-year
+
+hour-of-day
+
+Calculate robust quantiles:
+
+q05
+
+q25
+
+q50
+
+q75
+
+q95
+
+Generate:
+
+temperature_climatology_residual
+
+pressure_climatology_residual
+
+humidity_climatology_residual
+
+For new stations:
+
+use regional/climate-cluster priors first
+
+then gradually move toward station-specific history.
+
+Do not blindly retrain on every new observation.
+
+Faulty data must not become normal.
+
+============================================================
+12. EXPECTED-VALUE FORECAST MODELS
+============================================================
+
+Build one-step and short-horizon forecasting for:
+
+Temperature
+
+Pressure
+
+Relative Humidity
+
+Start with baselines:
+
+Persistence forecast
+
+Seasonal median
+
+Linear regression
+
+Ridge regression
+
+Then compare:
+
+XGBoost
+
+LightGBM
+
+HistGradientBoosting
+
+GRU
+
+TCN
+
+TinyTimeMixer
+
+Forecast models should output:
+
+expected value
+
+forecast interval
+
+normalized residual
+
+============================================================
+13. TINYTIMEMIXER
+============================================================
+
+Treat IBM TinyTimeMixer as an experimental/advanced CENTRAL model.
+
+Do NOT run it on the microcontroller.
+
+Do NOT claim it is automatically better because it is a foundation model.
+
+Use it as a candidate temporal model for the Virtual Weather Twin.
+
+Compare it against:
+
+Persistence
+
+XGBoost
+
+GRU
+
+TCN
+
+If TTM gives meaningful improvements on unseen-station evaluation, keep it.
+
+If simpler models perform similarly, use the simpler model in production and retain TTM as experimental.
+
+TTM is not the final anomaly classifier.
+
+Its output is:
+
+expected temporal trajectory
+
+forecast residual
+
+forecast uncertainty/context
+
+============================================================
+14. UNSUPERVISED ML
+============================================================
+
+Implement Isolation Forest as one evidence source.
+
+Use robustly scaled causal features.
+
+Possible inputs:
+
+T/P/RH
+
+rate-of-change
+
+MAD
+
+temporal residuals
+
+climatology residuals
+
+physics residuals
+
+multivariate features
+
+Do not allow Isolation Forest to become final authority.
+
+Output:
+
+raw anomaly score
+
+normalized evidence score
+
+model version
+
+============================================================
+15. OPTIONAL SEQUENCE MODEL
+============================================================
+
+Evaluate:
+
+TCN
+
+GRU
+
+LSTM Autoencoder
+
+Only use them if they meaningfully improve performance.
+
+Do not automatically use a Transformer.
+
+Track for every candidate:
+
+F1 improvement
+
+extreme-weather false-positive reduction
+
+latency
+
+RAM
+
+model size
+
+training complexity
+
+============================================================
+16. MULTIVARIATE CONSISTENCY
+============================================================
+
+Use:
+
+robust covariance
+
+Mahalanobis distance
+
+PCA reconstruction error
+
+conditional residual models
+
+Isolation Forest features
+
+Physics-derived atmospheric variables may be included, but remember they are correlated transformations of T/P/RH.
+
+============================================================
+17. SPATIAL INTELLIGENCE ENGINE
+============================================================
+
+Spatial reasoning is central to distinguishing weather from sensor failure.
+
+Store:
+
+station_id
+
+latitude
+
+longitude
+
+elevation
+
+climate cluster
+
+health
+
+last_seen
+
+data freshness
+
+historical neighbour correlation
+
+Do not choose neighbours purely by nearest geographic distance.
+
+Neighbour weight should conceptually include:
+
+distance similarity
+
+elevation similarity
+
+historical correlation
+
+climate similarity
+
+freshness
+
+sensor health
+
+Possible conceptual formula:
+
+weight =
+distance_weight
+× elevation_weight
+× correlation_weight
+× freshness_weight
+× health_weight
+
+Use robust estimation:
+
+weighted median
+
+trimmed weighted mean
+
+robust inverse-distance weighting
+
+Do not allow one broken neighbour to corrupt the network estimate.
+
+============================================================
+18. WEATHER PROPAGATION
+============================================================
+
+A real weather system does not hit all stations at the same second.
+
+Support lag-aware regional evidence.
+
+Look for:
+
+pressure fronts
+
+RH propagation
+
+temperature changes
+
+time-lagged neighbour correlation
+
+regional coherence
+
+This evidence should increase:
+
+GENUINE_WEATHER support
+
+when appropriate.
+
+============================================================
+19. NWP CONTEXT LAYER
+============================================================
+
+Create a generic interface:
+
+NWPProvider
+
+Possible adapters:
+
+OpenMeteoAdapter
+
+GFSAdapter
+
+ECMWFAdapter
+
+FutureIMDAdapter
+
+NWP must NOT be considered ground truth.
+
+NWP may contain:
+
+grid-resolution error
+
+terrain bias
+
+forecast error
+
+timing error
+
+microclimate mismatch
+
+Generate:
+
+NWP temperature expected value
+
+NWP pressure expected value
+
+NWP humidity expected value
+
+NWP residual
+
+NWP support score
+
+NWP freshness
+
+NWP confidence/reliability
+
+============================================================
+20. VIRTUAL WEATHER TWIN
+============================================================
+
+Create one Virtual Weather Twin per physical AWS.
+
+The twin is an expected-state engine.
+
+It combines:
+
+station climatology
+
+temporal forecast
+
+physics context
+
+healthy neighbours
+
+NWP
+
+station metadata
+
+elevation
+
+possibly climate-cluster context
+
+It outputs:
+
+expected_temperature
+
+temperature_interval
+
+expected_pressure
+
+pressure_interval
+
+expected_RH
+
+RH_interval
+
+twin_reliability
+
+source availability
+
+Then calculate:
+
+real-vs-twin residuals
+
+Example:
+
+REAL:
+46.7°C
+
+TWIN:
+29.8 ± 1.4°C
+
+Residual:
++16.9°C
+
+The Twin itself must have a reliability score.
+
+Example:
+
+Twin Reliability: HIGH
+
+because:
+
+5 healthy neighbours
+fresh NWP
+3 years station history
+physics context available
+
+or:
+
+Twin Reliability: LOW
+
+because:
+
+only one neighbour
+stale NWP
+new station
+insufficient historical data
+
+If Twin reliability is low, final system confidence should decrease.
+
+============================================================
+21. EVIDENCE CONTRACT
+============================================================
+
+Every detector should produce a standard evidence object.
+
+Example:
+
+DetectorEvidence {
+    detector_name
+    available
+    score
+    reliability
+    evidence_type
+    affected_variables
+    reason_codes
+    human_explanation
+    model_version
+}
+
+Possible evidence vector:
+
+integrity
+
+edge
+
+gross rules
+
+temporal
+
+climatology
+
+forecast
+
+Isolation Forest
+
+sequence
+
+multivariate
+
+physics-moisture
+
+physics-pressure
+
+physics-thermodynamic
+
+hydrostatic
+
+spatial
+
+NWP
+
+Virtual Twin
+
+weather support
+
+If evidence is unavailable, mark:
+
+available = false
+
+Do not substitute 0.
+
+============================================================
+22. TRUST FUSION ENGINE
+============================================================
+
+Use three levels.
+
+------------------------------------------------------------
+22.1 Deterministic safety guards
+------------------------------------------------------------
+
+Handle:
+
+corrupted values
+
+invalid RH
+
+NaN
+
+confirmed communication outage
+
+schema failure
+
+etc.
+
+------------------------------------------------------------
+22.2 Learned fusion
+------------------------------------------------------------
+
+Use a lightweight interpretable model such as:
+
+calibrated logistic regression
+
+XGBoost
+
+LightGBM
+
+Inputs:
+
+detector evidence
+
+reliability values
+
+context flags
+
+Outputs:
+
+P(NORMAL)
+
+P(GENUINE_WEATHER)
+
+P(SENSOR_FAULT)
+
+P(DATA_COMMS_ISSUE)
+
+P(BOTH_COMPLEX)
+
+------------------------------------------------------------
+22.3 Probability calibration
+------------------------------------------------------------
+
+Use:
+
+Platt scaling
+
+or
+
+isotonic regression
+
+Evaluate with:
+
+reliability diagram
+
+Brier score
+
+Expected Calibration Error
+
+Only after calibration may the UI show:
+
+“94% probability”
+
+Otherwise show:
+
+“Evidence Strength”.
+
+============================================================
+23. CONFORMAL UNCERTAINTY
+============================================================
+
+Add conformal classification if practical.
+
+Target coverage examples:
+
+90%
+
+95%
+
+Return prediction sets such as:
+
+{SENSOR_FAULT}
+
+or
+
+{SENSOR_FAULT, GENUINE_WEATHER}
+
+If exactly one supported class remains and safeguards agree:
+
+accept it.
+
+If multiple classes remain plausible:
+
+UNKNOWN_REVIEW.
+
+This is intentionally better than false certainty.
+
+============================================================
+24. DECISION STATE MACHINE
+============================================================
+
+Do not create an incident from every suspicious data point.
+
+Use:
+
+NORMAL
+↓
+SUSPICIOUS
+↓
+VERIFYING
+↓
+CONFIRMED
+
+Allow immediate CONFIRMED transitions for:
+
+gross corruption
+
+certain communication failure
+
+hard invalid values
+
+Use hysteresis to avoid:
+
+FAULT
+NORMAL
+FAULT
+NORMAL
+
+flickering.
+
+============================================================
+25. ROOT CAUSE ENGINE
+============================================================
+
+After operational classification, identify specific cause.
+
+Example output:
+
+Operational Class:
+SENSOR_FAULT
+
+Root Cause:
+TEMPERATURE_SPIKE
+
+Evidence:
+
+temperature increased +17°C in 60 seconds
+
+5/5 healthy neighbours remained normal
+
+Virtual Twin expected 29.7°C
+
+pressure behaviour remained normal
+
+moisture physics inconsistent
+
+Isolation Forest score extreme
+
+Generate human-readable evidence from actual detector outputs.
+
+============================================================
+26. EXPLAINABILITY
+============================================================
+
+Use two forms.
+
+A. Fast online explanation
+
+Generated directly from:
+
+rules
+
+residuals
+
+thresholds
+
+spatial comparisons
+
+physics inconsistencies
+
+Twin differences
+
+B. Model explanation
+
+Use SHAP where technically appropriate.
+
+For tree models:
+
+TreeSHAP
+
+Do not claim SHAP explains the entire hybrid architecture if it only explains one model.
+
+Separate:
+
+model explanation
+
+rule evidence
+
+physics evidence
+
+spatial evidence
+
+============================================================
+27. COUNTERFACTUAL DIAGNOSIS
+============================================================
+
+Add a “Why?” and “What would change this decision?” system.
+
+Example:
+
+Current Decision:
+SENSOR_FAULT
+
+For this event to be classified as GENUINE_WEATHER, the system would expect one or more of:
+
+similar changes at trusted neighbours
+
+coherent moisture changes
+
+NWP support
+
+sustained rather than instantaneous transition
+
+consistent pressure/RH response
+
+This is extremely useful for judges and operators.
+
+============================================================
+28. SAFE SELF-HEALING / CORRECTION
+============================================================
+
+Never modify raw data.
+
+Create multiple correction estimators:
+
+TemporalForecastEstimator
+
+SpatialNeighbourEstimator
+
+MultivariateConditionalEstimator
+
+VirtualTwinEstimator
+
+Each outputs:
+
+candidate
+
+interval
+
+reliability
+
+Only auto-propose strong correction when multiple estimators agree.
+
+Example:
+
+Temporal:
+31.8
+
+Spatial:
+32.1
+
+Twin:
+31.9
+
+Consensus:
+31.93°C
+
+Interval:
+31.5–32.4°C
+
+If estimators disagree strongly:
+
+NO AUTOMATIC CORRECTION
+
+Correction states:
+
+NOT_APPLICABLE
+
+PROPOSED
+
+AUTO_APPROVED
+
+MANUALLY_APPROVED
+
+REJECTED
+
+============================================================
+29. SENSOR HEALTH
+============================================================
+
+Maintain health separately for:
+
+temperature sensor
+
+pressure sensor
+
+humidity sensor
+
+communications
+
+overall station
+
+Factors:
+
+confirmed anomaly rate
+
+drift
+
+forecast residual trend
+
+flatline duration
+
+noise changes
+
+missing data
+
+communication failures
+
+spatial disagreement
+
+recent recovery
+
+Health must recover gradually when behaviour becomes normal.
+
+Avoid feedback loops where one false alarm permanently reduces neighbour influence.
+
+============================================================
+30. PREDICTIVE MAINTENANCE
+============================================================
+
+If no true failure labels exist, do NOT output:
+
+“sensor will fail in 6 days.”
+
+Instead show:
+
+LOW
+
+MODERATE
+
+HIGH
+
+CRITICAL
+
+maintenance risk.
+
+Base it on:
+
+health trend
+
+drift trend
+
+CUSUM
+
+residual trend
+
+fault frequency
+
+noise change
+
+communication problems
+
+Example:
+
+HIGH degradation risk
+
+Sensor health:
+91 → 67 in 12 days
+
+Forecast residual:
+3.4× increase
+
+Persistent positive drift:
+detected
+
+Recommendation:
+inspection during next maintenance cycle
+
+============================================================
+31. INCIDENT MANAGEMENT
+============================================================
+
+Group related anomalies into incidents.
+
+Incident fields:
+
+incident_id
+
+station_id
+
+opened_at
+
+last_updated
+
+classification
+
+root_cause
+
+affected_sensors
+
+severity
+
+confidence/evidence
+
+status
+
+observation_count
+
+Incident status:
+
+OPEN
+
+ACKNOWLEDGED
+
+INVESTIGATING
+
+RESOLVED
+
+FALSE_POSITIVE
+
+Escalate when:
+
+duration grows
+
+severity increases
+
+multiple sensors fail
+
+station goes offline
+
+health collapses
+
+============================================================
+32. FLEET INTELLIGENCE
+============================================================
+
+Network-wide analysis should detect:
+
+isolated station failures
+
+regional weather events
+
+regional anomaly clusters
+
+systemic communications failures
+
+model drift
+
+stations with declining health
+
+repeated fault fingerprints
+
+Do not interpret correlated regional behaviour as multiple sensor failures without evidence.
+
+============================================================
+33. SIMULATOR
+============================================================
+
+Build a realistic multi-station AWS simulator.
+
+Do not use three unrelated sine waves.
+
+Simulate:
+
+daily cycle
+
+seasonal baseline
+
+regional weather fronts
+
+station-local effects
+
+correlated T/P/RH
+
+different elevations
+
+configurable cadence
+
+Fault scenarios:
+
+temperature spike
+
+pressure spike
+
+RH spike
+
+sudden drop
+
+step offset
+
+gradual drift
+
+sensor freeze
+
+stuck value
+
+zero value
+
+saturation
+
+noise increase
+
+intermittent fault
+
+packet loss
+
+missing period
+
+duplicate packet
+
+out-of-order packet
+
+timestamp corruption
+
+communication outage
+
+multi-sensor fault
+
+complete station failure
+
+faulty neighbour
+
+regional genuine weather event
+
+localized unusual weather
+
+Ground-truth labels must remain hidden from the online detector.
+
+============================================================
+34. DATASET STRATEGY
+============================================================
+
+Use three groups.
+
+A. Real/background meteorological observations
+
+Use credible historical station-oriented data where possible.
+
+Do not claim reanalysis/grid data is identical to physical AWS telemetry.
+
+B. Synthetic sensor faults
+
+Inject diverse faults into clean background data.
+
+Randomize:
+
+magnitude
+
+duration
+
+onset
+
+season
+
+station
+
+sensor
+
+sampling interval
+
+C. Genuine extreme weather stress tests
+
+Keep unusual real weather periods unmodified.
+
+These evaluate whether the system incorrectly calls true weather a sensor fault.
+
+============================================================
+35. DATA SPLITTING
+============================================================
+
+Never randomly split time-series rows.
+
+Use chronological split:
+
+70% earliest:
+TRAIN
+
+15%:
+VALIDATION
+
+15% latest:
+TEST
+
+Also perform station holdout:
+
+Train:
+stations A-F
+
+Validation:
+station G
+
+Test:
+station H
+
+Fit scalers and statistical transformations using training data only.
+
+============================================================
+36. BASELINES
+============================================================
+
+Benchmark:
+
+hard rules
+
+robust Z/MAD
+
+Isolation Forest
+
+temporal forecast
+
+spatial only
+
+physics only
+
+edge autoencoder
+
+hybrid without sequence model
+
+hybrid with sequence model
+
+Virtual Twin
+
+full fusion system
+
+For every added model ask:
+
+Did F1 improve?
+
+Did extreme-weather false positives decrease?
+
+What latency was added?
+
+What RAM was added?
+
+What complexity was added?
+
+============================================================
+37. EVALUATION METRICS
+============================================================
+
+Report real metrics.
+
+Classification:
+
+Precision
+
+Recall
+
+F1
+
+Macro-F1
+
+PR-AUC
+
+per-class metrics
+
+Operational:
+
+false alerts per 1,000 normal observations
+
+false-positive rate on genuine extreme weather
+
+detection delay
+
+incident confirmation time
+
+unknown/manual-review rate
+
+Correction:
+
+MAE
+
+RMSE
+
+prediction interval coverage
+
+Calibration:
+
+Brier score
+
+Expected Calibration Error
+
+Latency:
+
+p50
+
+p95
+
+p99
+
+Throughput
+
+Edge:
+
+model size
+
+flash
+
+peak RAM
+
+tensor arena
+
+inference latency
+
+CPU/runtime
+
+optional power measurement
+
+============================================================
+38. ABLATION STUDY
+============================================================
+
+Create real comparison artifacts.
+
+Example:
+
+Rules only
+
+Rules + Temporal
+
++ Physics
+
++ Isolation Forest
+
++ Spatial
+
++ NWP
+
++ Virtual Twin
+
++ Learned Fusion
+
++ Uncertainty
+
+Show how each layer changes:
+
+F1
+
+false alerts
+
+weather-event FPR
+
+latency
+
+resource use
+
+============================================================
+39. DATABASE
+============================================================
+
+Recommended:
+
+PostgreSQL
+
+TimescaleDB where practical
+
+Tables:
+
+stations
+
+sensor_inventory
+
+observations_raw
+
+ingestion_events
+
+feature_snapshots
+
+edge_events
+
+qc_evidence
+
+physics_evidence
+
+anomaly_decisions
+
+root_causes
+
+virtual_twin_predictions
+
+nwp_context
+
+correction_candidates
+
+sensor_health_history
+
+incidents
+
+alerts
+
+maintenance_recommendations
+
+station_relationships
+
+models
+
+model_versions
+
+model_metrics
+
+feedback_labels
+
+audit_events
+
+Raw observations should be append-only.
+
+============================================================
+40. BACKEND
+============================================================
+
+Use:
+
+Python
+
+FastAPI
+
+Pydantic
+
+SQLAlchemy
+
+PostgreSQL
+
+Optional:
+
+Redis
+
+Keep architecture as:
+
+modular monolith + workers
+
+Do not create unnecessary microservices.
+
+Suggested structure:
+
+backend/
+  app/
+    api/
+    config/
+    schemas/
+    domain/
+    ingestion/
+    integrity/
+    features/
+    physics/
+    temporal/
+    climatology/
+    spatial/
+    nwp/
+    twin/
+    ml/
+    fusion/
+    uncertainty/
+    diagnosis/
+    correction/
+    health/
+    maintenance/
+    incidents/
+    alerts/
+    simulator/
+    services/
+    db/
+
+============================================================
+41. ML PACKAGE
+============================================================
+
+ml/
+  datasets/
+  preprocessing/
+  features/
+  physics/
+  detectors/
+  forecasting/
+  tinyml/
+  sequence/
+  spatial/
+  nwp/
+  twin/
+  fusion/
+  calibration/
+  conformal/
+  evaluation/
+  registry/
+  experiments/
+  training/
+
+Model artifacts should include:
+
+model
+
+feature schema
+
+training range
+
+metrics
+
+thresholds
+
+calibrator
+
+configuration
+
+version
+
+artifact hash
+
+============================================================
+42. EMBEDDED PACKAGE
+============================================================
+
+edge/
+  firmware/
+  tflite_micro/
+  models/
+  preprocessing/
+  ring_buffer/
+  transport/
+  qc/
+  telemetry/
+  benchmarks/
+
+Provide reproducible conversion:
+
+TensorFlow model
+↓
+quantization
+↓
+.tflite
+↓
+C array
+↓
+firmware build
+
+============================================================
+43. FRONTEND DESIGN SYSTEM
+============================================================
+
+Use the provided UI references.
+
+Recommended frontend:
+
+React
+
+TypeScript
+
+Vite
+
+Tailwind or carefully structured CSS
+
+React Three Fiber
+
+Three.js
+
+Drei
+
+Charts:
+
+ECharts / Recharts / similar
+
+State/query:
+
+React Query
+
+Zustand or equivalent
+
+Do not create a visually generic template.
+
+============================================================
+44. GLOBAL UI
+============================================================
+
+Top navigation:
+
+SkyGuard logo
+
+Overview
+
+Stations
+
+Incidents
+
+Analytics
+
+Reports
+
+Settings
+
+Right side:
+
+Live indicator
+
+last update time
+
+profile/operator menu
+
+Use white/light blue theme.
+
+============================================================
+45. OVERVIEW PAGE
+============================================================
+
+Main focus:
+
+3D India map
+
+Left panel:
+
+National AWS Network
+
+Stations monitored
+
+Healthy observations/stations
+
+Active incidents
+
+Offline stations
+
+Insufficient evidence
+
+Observation quality distribution
+
+Center:
+
+3D India AWS network
+
+Right:
+
+Live Sensor Intelligence
+
+Latest detection
+
+classification
+
+evidence/confidence
+
+System Status
+
+Recent Activity
+
+Bottom map controls:
+
+AWS status legend
+
+normal
+warning
+anomaly
+offline
+insufficient
+
+============================================================
+46. 3D INDIA MAP
+============================================================
+
+Reuse the existing uploaded 3D map foundation.
+
+Transform it into an operational visualization.
+
+Interactions:
+
+country-level view
+
+state hover
+
+state click
+
+camera fly-to
+
+station clustering
+
+cluster click
+
+individual station click
+
+station pulse for active incidents
+
+smooth map transitions
+
+Status:
+
+Green:
+Trusted / Healthy
+
+Amber:
+Warning
+
+Red:
+Anomaly / Sensor Fault
+
+Blue:
+Weather-supported event
+
+Grey:
+Offline
+
+Purple:
+Insufficient evidence
+
+Map layer switcher:
+
+AWS Status
+
+Temperature
+
+Pressure
+
+Humidity
+
+Sensor Health
+
+Incidents
+
+Physics Residual
+
+Virtual Twin Residual
+
+NWP Difference
+
+Communication Health
+
+Anomaly Density
+
+============================================================
+47. STATIONS PAGE
+============================================================
+
+Layout:
+
+left filter panel
+
+large map
+
+station table below
+
+station quick-detail panel on right
+
+Filters:
+
+All
+
+Healthy
+
+Warning
+
+Anomaly
+
+Offline
+
+Insufficient
+
+Search:
+
+station ID
+
+city
+
+state
+
+Station table:
+
+Station ID
+
+State
+
+Status
+
+Temperature
+
+Pressure
+
+RH
+
+Last Sync
+
+Evidence/Confidence
+
+Actions
+
+Click station:
+
+open detail drawer
+
+============================================================
+48. STATION DETAIL PAGE
+============================================================
+
+Header:
+
+station ID
+
+location
+
+coordinates
+
+elevation
+
+network
+
+status
+
+health
+
+last update
+
+uptime
+
+communication
+
+Main time-series:
+
+Temperature
+
+Pressure
+
+RH
+
+Include:
+
+observed
+
+expected range
+
+Virtual Twin forecast
+
+anomaly markers
+
+Tabs:
+
+Overview
+
+Sensors
+
+Physics
+
+Twin
+
+Evidence
+
+History
+
+Maintenance
+
+Edge Intelligence
+
+============================================================
+49. PHYSICS UI
+============================================================
+
+Display:
+
+Dew Point
+
+Dew Point Depression
+
+Saturation Vapour Pressure
+
+Actual Vapour Pressure
+
+VPD
+
+Specific Humidity
+
+Mixing Ratio
+
+Pressure Tendency
+
+Potential Temperature
+
+Virtual Temperature
+
+Air Density
+
+Physics evidence:
+
+Moisture Consistency
+
+Pressure Consistency
+
+Thermodynamic Consistency
+
+Hydrostatic Consistency
+
+Overall Physics State
+
+Explain the main physical inconsistency in human-readable language.
+
+============================================================
+50. VIRTUAL TWIN UI
+============================================================
+
+Use a real-vs-expected design.
+
+Example:
+
+REAL AWS
+Temperature 46.7°C
+
+VIRTUAL WEATHER TWIN
+29.8 ± 1.4°C
+
+Residual:
++16.9°C
+
+Also:
+
+Pressure real vs expected
+
+RH real vs expected
+
+Twin Reliability:
+
+HIGH / MEDIUM / LOW
+
+Sources:
+
+temporal model
+
+station history
+
+physics
+
+healthy neighbours
+
+NWP
+
+climatology
+
+============================================================
+51. EDGE INTELLIGENCE UI
+============================================================
+
+Show:
+
+EdgeGuard status
+
+hardware
+
+firmware version
+
+model version
+
+Dense Autoencoder INT8
+
+measured model size
+
+measured tensor arena
+
+measured peak RAM
+
+measured inference time
+
+reconstruction error
+
+normal threshold
+
+edge state
+
+connection state
+
+buffered observations
+
+Do not show fake metrics.
+
+============================================================
+52. INCIDENTS PAGE
+============================================================
+
+Use the supplied UI reference structure.
+
+Top cards:
+
+Open Incidents
+
+Critical
+
+Under Review
+
+Resolved Today
+
+Average Response Time
+
+Left:
+
+incident filters
+
+severity
+
+category
+
+status
+
+date range
+
+Center:
+
+incident-focused 3D map
+
+Bottom:
+
+incident queue
+
+Right:
+
+selected incident detail
+
+Tabs:
+
+Overview
+
+Evidence
+
+Physics
+
+Twin
+
+Timeline
+
+Notes
+
+Incident categories:
+
+Sensor Fault
+
+Communication Failure
+
+Extreme / Genuine Weather
+
+Insufficient Evidence
+
+Weather-Supported Event
+
+Both/Complex
+
+============================================================
+53. INCIDENT EVIDENCE PANEL
+============================================================
+
+Show:
+
+Primary Evidence
+
+Supporting Evidence
+
+Temporal Signature
+
+Physics Consistency
+
+Neighbour Support
+
+NWP Support
+
+Virtual Twin Residual
+
+Model Outputs
+
+Recommended Action
+
+Evidence should be readable by non-ML judges.
+
+Example:
+
+Primary:
+Temperature Spike
+
+Observed:
+46.7°C
+
+Expected:
+29.8 ± 1.4°C
+
+Supporting:
+
+5/5 healthy neighbours normal
+
+temperature/moisture physics inconsistent
+
+NWP supports ~30°C
+
+Isolation Forest strong anomaly
+
+============================================================
+54. ANALYTICS PAGE
+============================================================
+
+Use reference layout but populate with actual metrics.
+
+Top KPIs:
+
+Detection Recall
+
+False Alert Rate
+
+Station Availability
+
+Mean Time to Detect
+
+Unknown/Abstention Rate
+
+Charts:
+
+Incidents Trend
+
+Anomaly Categories
+
+Geographic Incident Heatmap
+
+Confidence / Evidence Distribution
+
+Environmental Data Quality Trends
+
+State-wise Performance
+
+Incident Resolution Time
+
+Model Comparison
+
+Calibration Plot
+
+Latency Distribution
+
+Extreme-weather False Positive Rate
+
+Do not hardcode numbers.
+
+Read them from benchmark artifacts/API.
+
+============================================================
+55. MODEL COMPARISON UI
+============================================================
+
+Compare:
+
+Rules
+
+Isolation Forest
+
+Physics
+
+Temporal
+
+Spatial
+
+Virtual Twin
+
+Hybrid Fusion
+
+TTM experimental
+
+Metrics:
+
+Precision
+
+Recall
+
+F1
+
+Extreme Weather FPR
+
+Latency
+
+Memory
+
+Do not visually declare a model winner unless benchmark evidence supports it.
+
+============================================================
+56. REPORTS PAGE
+============================================================
+
+Generate:
+
+Station Health Report
+
+Incident Report
+
+Network Reliability Report
+
+Model Performance Report
+
+Maintenance Report
+
+All reports must use real stored data.
+
+============================================================
+57. DEMO / SCENARIO LAB
+============================================================
+
+Add a SIH Demo Mode.
+
+Scenarios:
+
+Normal operation
+
+Temperature spike
+
+Pressure drift
+
+Frozen RH sensor
+
+Communication outage
+
+Regional pressure front
+
+Extreme heat event
+
+Faulty neighbouring station
+
+Ambiguous localized weather
+
+Multi-sensor fault
+
+Select scenario.
+
+Press:
+
+RUN SCENARIO
+
+Then animate the live system.
+
+Example timeline:
+
+T+00:
+station normal
+
+T+08:
+temperature rises
+
+T+13:
+edge detector suspicious
+
+T+15:
+physics inconsistency detected
+
+T+15:
+neighbours disagree
+
+T+16:
+Twin divergence increases
+
+T+17:
+fusion → SENSOR_FAULT
+
+T+18:
+incident created
+
+T+18:
+correction candidate produced
+
+============================================================
+58. OFFLINE EDGE DEMO
+============================================================
+
+Provide a demo where cloud connectivity is manually disabled.
+
+UI:
+
+Cloud:
+OFFLINE
+
+Sensor polling:
+ACTIVE
+
+EdgeGuard:
+ACTIVE
+
+Local buffering:
+ACTIVE
+
+Trigger a fault.
+
+Then reconnect.
+
+Show:
+
+Uploading buffered observations...
+
+Replaying edge events...
+
+Central verification...
+
+Incident reconstructed.
+
+This is an important SIH demonstration.
+
+============================================================
+59. “WHY?” MODE
+============================================================
+
+Every incident should support:
+
+WHY WAS THIS FLAGGED?
+
+Example:
+
+1. Temperature is 16.9°C above its Virtual Twin expectation.
+
+2. Five nearby healthy AWS stations do not show a corresponding increase.
+
+3. Pressure remained stable.
+
+4. Moisture physics is inconsistent with the temperature change.
+
+5. NWP predicts a temperature close to the Virtual Twin.
+
+6. Isolation Forest reports strong anomaly evidence.
+
+Technical details:
+
+robust Z
+
+MAD
+
+CUSUM
+
+SHAP
+
+forecast residual
+
+spatial residual
+
+physics residual
+
+NWP residual
+
+Twin residual
+
+============================================================
+60. RECOMMENDED ACTION
+============================================================
+
+Generate operator actions such as:
+
+Monitor
+
+Inspect sensor
+
+Check communication hardware
+
+Quarantine measurement
+
+Publish correction candidate
+
+Request manual review
+
+Do not automatically publish corrected measurements without a policy decision.
+
+============================================================
+61. API CONTRACT
+============================================================
+
+Suggested routes:
+
+POST /api/v1/observations
+
+POST /api/v1/observations/batch
+
+GET /api/v1/stations
+
+GET /api/v1/stations/{id}
+
+GET /api/v1/stations/{id}/timeline
+
+GET /api/v1/stations/{id}/health
+
+GET /api/v1/stations/{id}/neighbors
+
+GET /api/v1/stations/{id}/physics
+
+GET /api/v1/stations/{id}/twin
+
+GET /api/v1/stations/{id}/edge
+
+GET /api/v1/anomalies
+
+GET /api/v1/anomalies/{id}
+
+GET /api/v1/anomalies/{id}/evidence
+
+GET /api/v1/anomalies/{id}/explanation
+
+GET /api/v1/incidents
+
+PATCH /api/v1/incidents/{id}
+
+GET /api/v1/corrections
+
+POST /api/v1/corrections/{id}/approve
+
+POST /api/v1/corrections/{id}/reject
+
+GET /api/v1/maintenance
+
+GET /api/v1/models
+
+GET /api/v1/models/metrics
+
+GET /api/v1/system/status
+
+POST /api/v1/simulator/start
+
+POST /api/v1/simulator/stop
+
+POST /api/v1/simulator/inject
+
+POST /api/v1/simulator/replay
+
+WebSocket:
+
+/ws/events
+
+Events:
+
+observation
+
+edge alert
+
+anomaly
+
+incident update
+
+health update
+
+correction proposal
+
+station connectivity
+
+============================================================
+62. FAILURE RECOVERY
+============================================================
+
+If Isolation Forest fails:
+
+rules + physics + temporal + spatial continue.
+
+If NWP unavailable:
+
+mark unavailable.
+
+Do not set its score to 0.
+
+If neighbours unavailable:
+
+mark spatial evidence unavailable.
+
+If TTM unavailable:
+
+use simpler temporal forecast.
+
+If cloud unavailable:
+
+edge continues.
+
+If current model artifact corrupted:
+
+fallback to previous validated model.
+
+If station lacks history:
+
+use regional prior.
+
+If evidence insufficient:
+
+UNKNOWN_REVIEW.
+
+============================================================
+63. MODEL DRIFT
+============================================================
+
+Monitor:
+
+feature drift
+
+score distribution drift
+
+residual distribution
+
+false-positive trend
+
+station-specific behaviour shift
+
+calibration deterioration
+
+Use:
+
+champion model
+
+challenger model
+
+No uncontrolled online retraining.
+
+============================================================
+64. HUMAN FEEDBACK
+============================================================
+
+Allow operators to mark:
+
+confirmed sensor fault
+
+confirmed real weather
+
+false positive
+
+maintenance confirmed
+
+unknown
+
+Store these labels.
+
+Do not retrain immediately from one label.
+
+Use reviewed labels in controlled future training.
+
+============================================================
+65. SECURITY
+============================================================
+
+Use:
+
+environment variables
+
+no secrets in frontend
+
+schema validation
+
+rate limiting
+
+authentication
+
+role-based control
+
+audit trail
+
+safe file handling
+
+Future station authentication:
+
+device API key
+
+certificate
+
+or another strong mechanism
+
+============================================================
+66. OBSERVABILITY
+============================================================
+
+Track:
+
+ingestion rate
+
+dropped events
+
+queue delay
+
+processing latency
+
+model latency
+
+database latency
+
+open incidents
+
+station connectivity
+
+model errors
+
+edge connectivity
+
+Use structured logging.
+
+Include:
+
+request ID
+
+observation ID
+
+station ID
+
+============================================================
+67. TESTING
+============================================================
+
+Create:
+
+unit tests
+
+integration tests
+
+ML tests
+
+feature causality tests
+
+leakage tests
+
+database tests
+
+API tests
+
+simulation scenario tests
+
+edge serialization tests
+
+load tests
+
+Critical causality test:
+
+Changing data after timestamp t must NEVER change the original streaming features/prediction computed for t.
+
+============================================================
+68. REPRODUCIBILITY
+============================================================
+
+Provide:
+
+docker compose up
+
+and commands such as:
+
+make generate-data
+
+make train
+
+make train-edge
+
+make evaluate
+
+make benchmark-edge
+
+make replay-demo
+
+make test
+
+Record:
+
+seed
+
+dataset version
+
+model version
+
+Git commit
+
+configuration
+
+============================================================
+69. DOCUMENTATION
+============================================================
+
+Create:
+
+README.md
+
+docs/SYSTEM_DESIGN.md
+
+docs/ML_METHODOLOGY.md
+
+docs/PHYSICS_ENGINE.md
+
+docs/EDGEGUARD.md
+
+docs/VIRTUAL_WEATHER_TWIN.md
+
+docs/NWP_INTEGRATION.md
+
+docs/SPATIAL_ENGINE.md
+
+docs/DATA_CONTRACT.md
+
+docs/DECISION_POLICY.md
+
+docs/CORRECTION_POLICY.md
+
+docs/EVALUATION.md
+
+docs/IMD_INTEGRATION.md
+
+docs/DEMO_GUIDE.md
+
+docs/LIMITATIONS.md
+
+Clearly label features as:
+
+implemented
+
+experimental
+
+simulated
+
+future integration
+
+real-data validated
+
+============================================================
+70. CRITICAL END-TO-END SCENARIOS
+============================================================
+
+The final system must demonstrate all of these.
+
+Scenario 1:
+Normal station
+
+Result:
+NORMAL
+
+Scenario 2:
+Instant temperature spike
+
+Neighbours normal
+
+Physics inconsistent
+
+Twin disagrees
+
+Result:
+SENSOR_FAULT / SPIKE
+
+Scenario 3:
+Gradual temperature drift
+
+Result:
+SENSOR_FAULT / GRADUAL_DRIFT
+
+Health declines over time.
+
+Scenario 4:
+Frozen humidity sensor
+
+T/P continue changing.
+
+Result:
+SENSOR_FAULT / FROZEN_SENSOR
+
+Scenario 5:
+Regional pressure drop propagates across stations
+
+Result:
+GENUINE_WEATHER
+
+No correction.
+
+Scenario 6:
+Highly localized unusual weather
+
+Evidence ambiguous.
+
+Result:
+UNKNOWN_REVIEW
+
+Scenario 7:
+Station stops transmitting
+
+Result:
+DATA_COMMS_ISSUE
+
+Do not wait for another reading.
+
+Scenario 8:
+Fault confirmed and correction estimators agree
+
+Generate correction candidate.
+
+Raw remains unchanged.
+
+Scenario 9:
+Correction estimators disagree
+
+No automatic correction.
+
+Scenario 10:
+Sensor recovers
+
+Health gradually improves.
+
+Scenario 11:
+One neighbour becomes faulty
+
+Robust spatial system prevents poisoning.
+
+Scenario 12:
+TTM/sequence model unavailable
+
+System still works.
+
+Scenario 13:
+Cloud disconnected
+
+EdgeGuard continues detecting and buffering.
+
+Scenario 14:
+Cloud reconnects
+
+Buffered data is replayed and centrally verified.
+
+Scenario 15:
+Real extreme weather appears statistically unusual
+
+Physics + neighbours + NWP support it.
+
+Result:
+GENUINE_WEATHER
+
+============================================================
+71. PRIORITY ORDER
+============================================================
+
+Prioritize:
+
+1. correct data architecture
+
+2. immutable raw observations
+
+3. no temporal leakage
+
+4. edge TinyML
+
+5. physics consistency
+
+6. genuine-weather vs fault separation
+
+7. station-adaptive temporal modelling
+
+8. spatial reasoning
+
+9. Virtual Weather Twin
+
+10. NWP context
+
+11. calibrated evidence fusion
+
+12. uncertainty
+
+13. correction
+
+14. sensor health
+
+15. maintenance
+
+16. incident management
+
+17. benchmark quality
+
+18. 3D UI
+
+19. deployment polish
+
+Do NOT sacrifice scientific correctness for flashy AI.
+
+============================================================
+72. IMPLEMENTATION PHASES
+============================================================
+
+PHASE 1
+
+project cleanup
+
+data schema
+
+database
+
+ingestion
+
+simulator
+
+3D map integration
+
+basic UI shell
+
+PHASE 2
+
+integrity QC
+
+causal features
+
+robust temporal rules
+
+climatology
+
+physics engine
+
+PHASE 3
+
+Isolation Forest
+
+forecast models
+
+multivariate detection
+
+spatial engine
+
+PHASE 4
+
+Virtual Weather Twin
+
+NWP adapter
+
+learned fusion
+
+calibration
+
+uncertainty
+
+PHASE 5
+
+root cause
+
+correction
+
+sensor health
+
+maintenance
+
+incidents
+
+PHASE 6
+
+TinyML Dense Autoencoder
+
+TFLite Micro conversion
+
+edge telemetry
+
+offline buffering
+
+edge benchmark
+
+PHASE 7
+
+TTM / GRU / TCN experiments
+
+ablation
+
+station holdout evaluation
+
+extreme-weather tests
+
+PHASE 8
+
+finish UI pages
+
+demo mode
+
+reports
+
+system status
+
+documentation
+
+PHASE 9
+
+full end-to-end validation
+
+performance testing
+
+failure-recovery testing
+
+SIH demonstration flow
+
+============================================================
+73. FINAL PRODUCT STANDARD
+============================================================
+
+The finished platform should NOT feel like:
+
+“An ML dashboard that shows anomaly scores.”
+
+It should feel like:
+
+“A national Automatic Weather Station intelligence and data-trust platform.”
+
+A judge should be able to click any station and understand:
+
+What did the station report?
+
+What should it probably have reported?
+
+Is the observation unusual?
+
+Is the behaviour physically coherent?
+
+Do nearby AWS stations agree?
+
+Does NWP support it?
+
+Does the Virtual Weather Twin agree?
+
+Did the edge device detect it?
+
+What do the ML models think?
+
+How certain is the system?
+
+Is this real weather or a sensor/data failure?
+
+What exactly failed?
+
+Can a replacement value safely be estimated?
+
+Is the sensor degrading?
+
+What should an operator do next?
+
+Every major system decision should be traceable back to real evidence.
+
+============================================================
+74. CORE PITCH
+============================================================
+
+The architecture should support the following concise explanation:
+
+“SkyGuard uses intelligence at two levels. At the weather station, a quantized TinyML autoencoder together with lightweight physics and statistical checks continuously screens sensor behaviour, even when network connectivity is lost. At the central platform, each observation is evaluated against station history, atmospheric physics, temporal forecasting, neighbouring AWS stations, Numerical Weather Prediction and a Virtual Weather Twin. These independent evidence sources are fused using a calibrated decision model with explicit uncertainty handling. This allows SkyGuard to distinguish genuine extreme weather from sensor and communication failures instead of simply flagging unusual values. Raw measurements remain immutable, corrections are only proposed when multiple independent estimators agree, and every decision is explainable and auditable.”
+
+============================================================
+75. FINAL IMPLEMENTATION RULE
+============================================================
+
+Do not create fake UI functionality.
+
+Do not leave dead buttons.
+
+Do not hardcode demo metrics.
+
+Do not create disconnected pages.
+
+Do not fake ML outputs.
+
+Do not silently substitute missing evidence with zero.
+
+Do not overwrite observations.
+
+Do not train using future information.
+
+Do not claim physical independence for variables derived from the same sensors.
+
+Do not claim calibrated probability without calibration.
+
+Do not claim cryptographic auditability unless cryptography is actually implemented.
+
+Do not claim embedded resource usage until measured on hardware.
+
+Do not choose a complex model unless benchmarking justifies it.
+
+Build the platform incrementally, test each layer, connect every frontend component to real backend state, and keep all model/evaluation results reproducible.
+
+The final result must be usable for:
+
+SIH internal screening
+
+SIH final presentation
+
+technical judging
+
+live hardware demonstration
+
+future real AWS/IMD integration
+
+future production extension.
