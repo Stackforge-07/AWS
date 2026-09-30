@@ -4,6 +4,7 @@
 - Fixed Render deployment startup hang: decoupled heavy simulation seeding and archive generation into a background asyncio thread so FastAPI lifespan yields immediately and Uvicorn opens the listening socket within 1-2 seconds.
 - Added unauthenticated `/health` endpoint and exempted `/api/v1/system/status` from `X-API-Key` policy middleware to prevent Render port scan/health check timeouts.
 - Updated `render.yaml` health check path to `/health`.
+- Populated Railway PostgreSQL database with 500 stations across India, 969 incidents, 247 corrections, 1,023 audit events, 8 settings, and 20,000 active observations and anomaly decisions for cloud operation.
 - Working local prototype is running at http://127.0.0.1:5173; API docs at http://127.0.0.1:8010/docs.
 - Resume commands: `make setup` then `make dev` if the retained processes have stopped. Do not reset/delete the existing database.
 - User will provide their existing 3D map later. Northern polygons now show Jammu & Kashmir and Ladakh separately using the India-claimed boundary convention; other base polygons remain historical.
