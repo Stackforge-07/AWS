@@ -78,6 +78,21 @@ async def lifespan(app):
 app=FastAPI(title='SkyGuard AWS Intelligence',version='0.1.0',lifespan=lifespan)
 app.add_middleware(CORSMiddleware,allow_origins=os.getenv('CORS_ORIGINS','http://127.0.0.1:5173,http://localhost:5173').split(','),allow_methods=['GET','POST','PATCH'],allow_headers=['Content-Type','X-API-Key'])
 
+@app.get('/')
+def root():
+    return {
+        'service': 'SkyGuard AWS Intelligence Platform',
+        'status': 'operational',
+        'version': '0.1.0',
+        'docs': '/docs',
+        'health': '/health',
+        'endpoints': {
+            'summary': '/api/v1/summary',
+            'stations': '/api/v1/stations',
+            'system_status': '/api/v1/system/status'
+        }
+    }
+
 @app.get('/health')
 def health_check():
     return {'status':'ok'}
