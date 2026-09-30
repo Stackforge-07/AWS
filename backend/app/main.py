@@ -35,11 +35,27 @@ async def lifespan(app):
     initialize()
     with lock, Session.begin() as s:
         if MODE=='simulation':
-            seed(s)
-            expand_demo(s)
-        else: set_setting(s,'mode',{'value':'live'})
+            set_setting(s,'mode',{'value':'simulation'})
+        else:
+            set_setting(s,'mode',{'value':'live'})
         config=get_setting(s,'monitor',{'interval_seconds':30,'cycles':0})
         set_setting(s,'monitor',{**config,'enabled':False})
+
+    def run_seeding():
+        if MODE=='simulation':
+            try:
+                with lock, Session.begin() as s:
+                    seed(s)
+                with lock, Session.begin() as s:
+                    expand_demo(s)
+            except Exception as exc:
+                import logging
+                logging.getLogger('uvicorn.error').warning(f'Background seeding: {exc}')
+
+    seed_task = None
+    if MODE=='simulation':
+        seed_task = asyncio.create_task(asyncio.to_thread(run_seeding))
+
     async def ticks():
         while True:
             await asyncio.sleep(10)
@@ -56,9 +72,15 @@ async def lifespan(app):
     task=asyncio.create_task(ticks())
     yield
     task.cancel()
+    if seed_task and not seed_task.done():
+        seed_task.cancel()
 
 app=FastAPI(title='SkyGuard AWS Intelligence',version='0.1.0',lifespan=lifespan)
 app.add_middleware(CORSMiddleware,allow_origins=os.getenv('CORS_ORIGINS','http://127.0.0.1:5173,http://localhost:5173').split(','),allow_methods=['GET','POST','PATCH'],allow_headers=['Content-Type','X-API-Key'])
+
+@app.get('/health')
+def health_check():
+    return {'status':'ok'}
 
 @app.middleware('http')
 async def policy(request:Request,call_next):
@@ -66,7 +88,7 @@ async def policy(request:Request,call_next):
     if int(request.headers.get('content-length','0') or 0)>2_000_000:
         from fastapi.responses import JSONResponse
         return JSONResponse({'detail':'Request body exceeds 2 MB'},status_code=413)
-    if request.url.path.startswith('/api'):
+    if request.url.path.startswith('/api') and request.url.path not in ('/api/v1/system/status',):
         if API_KEY and not secrets.compare_digest(request.headers.get('X-API-Key',''),API_KEY):
             from fastapi.responses import JSONResponse
             return JSONResponse({'detail':'API key required'},status_code=401)
