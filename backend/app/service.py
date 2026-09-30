@@ -147,10 +147,10 @@ def heartbeat(s, clock=None):
 def network_summary(s):
     stations=[public_station(st) for st in s.scalars(select(Station)).all()]
     counts={cls:sum(st.get('classification')==cls for st in stations) for cls in ('NORMAL','GENUINE_WEATHER','SENSOR_FAULT','DATA_COMMS_ISSUE','BOTH_COMPLEX','UNKNOWN_REVIEW')}
-    incidents=s.scalars(select(Incident).order_by(Incident.updated_at.desc())).all()
+    active_incidents=s.scalar(select(func.count()).select_from(Incident).where(Incident.status.in_(ACTIVE))) or 0
     total=s.scalar(select(func.count()).select_from(Raw)) or 0
     online=sum(st.get('online',False) for st in stations)
     return {'station_count':len(stations),'online':online,'offline':len(stations)-online,'availability':round(100*online/max(1,len(stations)),1),
-            'class_counts':counts,'active_incidents':sum(i.status in ACTIVE for i in incidents),'observations':total,
+            'class_counts':counts,'active_incidents':active_incidents,'observations':total,
             'last_update':max((st.get('last_update','') for st in stations),default=None),
             'mode':get_setting(s,'mode',{'value':'simulation'})['value'], 'clock':get_setting(s,'clock',{'timestamp':now()})['timestamp']}

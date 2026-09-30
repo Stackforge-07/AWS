@@ -1,6 +1,7 @@
 # SkyGuard work log
 
 ## Current checkpoint — 2026-09-30
+- Performance optimization for cloud database: optimized `network_summary` to compute active incidents via SQL count aggregation instead of loading all 969 incident ORM records into Python memory. Added connection pool tuning (`pool_size=10, max_overflow=20, pool_recycle=300`) and in-memory TTL caching for `/api/v1/summary`, `/api/v1/stations`, and `/api/v1/incidents` to eliminate cross-region database proxy latency.
 - Fixed Render deployment startup hang: decoupled heavy simulation seeding and archive generation into a background asyncio thread so FastAPI lifespan yields immediately and Uvicorn opens the listening socket within 1-2 seconds.
 - Added unauthenticated `/health` endpoint and exempted `/api/v1/system/status` from `X-API-Key` policy middleware to prevent Render port scan/health check timeouts.
 - Updated `render.yaml` health check path to `/health`.

@@ -126,15 +126,36 @@ def missing(): raise HTTPException(404,'Record not found')
 
 def serialize_incident(i): return {'id':i.id,'station_id':i.station_id,'status':i.status,'opened_at':iso(i.opened_at),'updated_at':iso(i.updated_at),**i.payload}
 
+_mem_cache = {}
+
+def cached_val(key, ttl, compute_fn):
+    now_ts = time.monotonic()
+    entry = _mem_cache.get(key)
+    if entry and now_ts - entry[0] < ttl:
+        return entry[1]
+    val = compute_fn()
+    _mem_cache[key] = (now_ts, val)
+    return val
+
+def clear_mem_cache():
+    _mem_cache.clear()
+
 @app.get('/api/v1/summary')
 def summary():
+    return cached_val('summary', 4, lambda: network_summary_fetch())
+
+def network_summary_fetch():
     with Session() as s: return network_summary(s)
 
 @app.get('/api/v1/stations')
 def stations(q:str='',status:str='ALL'):
-    with Session() as s:
-        rows=[public_station(st) for st in s.scalars(select(Station).order_by(Station.id))]
-        return [st for st in rows if q.lower() in f'{st["id"]} {st["city"]} {st["state"]}'.lower() and (status=='ALL' or st.get('classification')==status)]
+    def fetch():
+        with Session() as s:
+            return [public_station(st) for st in s.scalars(select(Station).order_by(Station.id))]
+    rows = cached_val('stations', 5, fetch)
+    if not q and status == 'ALL':
+        return rows
+    return [st for st in rows if q.lower() in f'{st["id"]} {st["city"]} {st["state"]}'.lower() and (status=='ALL' or st.get('classification')==status)]
 
 @app.post('/api/v1/stations',status_code=201)
 def add_station(payload:StationInput):
@@ -142,6 +163,7 @@ def add_station(payload:StationInput):
         if s.get(Station,payload.id): raise HTTPException(409,'Station already exists')
         st=Station(id=payload.id,metadata_json=payload.model_dump(exclude={'id'}),state_json={})
         s.add(st); audit(s,'station_registered',{'id':payload.id})
+        clear_mem_cache()
         return public_station(st)
 
 @app.get('/api/v1/stations/{id}')
@@ -194,14 +216,20 @@ def section(id:str,section:str):
 @app.post('/api/v1/observations',status_code=201)
 def observe(payload:Observation):
     with lock, Session.begin() as s:
-        try: return ingest(s,payload)
+        try:
+            res = ingest(s,payload)
+            clear_mem_cache()
+            return res
         except ValueError as e: raise HTTPException(409,str(e))
 
 @app.post('/api/v1/observations/batch')
 def batch(payload:list[Observation]):
     if len(payload)>1000: raise HTTPException(413,'Maximum 1000 observations per batch')
     with lock, Session.begin() as s:
-        try: return [ingest(s,o) for o in payload]
+        try:
+            res = [ingest(s,o) for o in payload]
+            clear_mem_cache()
+            return res
         except ValueError as e: raise HTTPException(409,str(e))
 
 @app.post('/api/v1/observations/csv')
@@ -215,8 +243,10 @@ async def upload_csv(request:Request):
     return batch(packets)
 
 @app.get('/api/v1/incidents')
-def incidents():
-    with Session() as s: return [serialize_incident(i) for i in s.scalars(select(Incident).order_by(Incident.updated_at.desc()))]
+def incidents(limit: int = 150):
+    def fetch():
+        with Session() as s: return [serialize_incident(i) for i in s.scalars(select(Incident).order_by(Incident.updated_at.desc()).limit(limit))]
+    return cached_val(f'incidents_{limit}', 4, fetch)
 
 @app.patch('/api/v1/incidents/{id}')
 def update_incident(id:str,payload:IncidentUpdate):
@@ -233,6 +263,7 @@ def update_incident(id:str,payload:IncidentUpdate):
         item.payload=details
         item.updated_at=now()
         audit(s,'incident_review',{'incident_id':id,**payload.model_dump(exclude_none=True)})
+        clear_mem_cache()
         return serialize_incident(item)
 
 @app.get('/api/v1/anomalies')
