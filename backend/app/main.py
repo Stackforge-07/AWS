@@ -243,10 +243,10 @@ async def upload_csv(request:Request):
     return batch(packets)
 
 @app.get('/api/v1/incidents')
-def incidents(limit: int = 150):
+def incidents():
     def fetch():
-        with Session() as s: return [serialize_incident(i) for i in s.scalars(select(Incident).order_by(Incident.updated_at.desc()).limit(limit))]
-    return cached_val(f'incidents_{limit}', 4, fetch)
+        with Session() as s: return [serialize_incident(i) for i in s.scalars(select(Incident).order_by(Incident.updated_at.desc()))]
+    return cached_val('all_incidents', 4, fetch)
 
 @app.patch('/api/v1/incidents/{id}')
 def update_incident(id:str,payload:IncidentUpdate):
