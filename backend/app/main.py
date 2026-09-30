@@ -27,17 +27,24 @@ def heartbeat_snapshot():
     with lock, Session.begin() as s:
         mode=get_setting(s,'mode',{'value':MODE})['value']
         run_monitor_cycle(s)
-        changed=heartbeat(s, None if mode=='live' else get_setting(s,'clock',{'timestamp':now()})['timestamp'])
+        if mode=='simulation':
+            clock_setting=get_setting(s,'clock',{})
+            clock=clock_setting.get('timestamp',1790150400)
+            changed=heartbeat(s,clock)
+        else:
+            changed=heartbeat(s,now())
         return changed,network_summary(s)
 
 @asynccontextmanager
 async def lifespan(app):
     initialize()
     with lock, Session.begin() as s:
-        if MODE=='simulation':
-            set_setting(s,'mode',{'value':'simulation'})
-        else:
-            set_setting(s,'mode',{'value':'live'})
+        mode_val=os.getenv('SKYGUARD_MODE','simulation')
+        set_setting(s,'mode',{'value':mode_val})
+        if mode_val=='simulation':
+            clock_cfg=get_setting(s,'clock',{})
+            if not clock_cfg or not clock_cfg.get('timestamp'):
+                set_setting(s,'clock',{'timestamp':1790150400})
         config=get_setting(s,'monitor',{'interval_seconds':30,'cycles':0})
         set_setting(s,'monitor',{**config,'enabled':False})
 

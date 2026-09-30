@@ -1,12 +1,12 @@
 # SkyGuard work log
 
 ## Current checkpoint — 2026-09-30
-- Performance optimization for cloud database: optimized `network_summary` to compute active incidents via SQL count aggregation instead of loading all 969 incident ORM records into Python memory. Added connection pool tuning (`pool_size=10, max_overflow=20, pool_recycle=300`) and in-memory TTL caching for `/api/v1/summary`, `/api/v1/stations`, and `/api/v1/incidents` to eliminate cross-region database proxy latency.
-- Fixed Render deployment startup hang: decoupled heavy simulation seeding and archive generation into a background asyncio thread so FastAPI lifespan yields immediately and Uvicorn opens the listening socket within 1-2 seconds.
-- Added unauthenticated `/health` endpoint and exempted `/api/v1/system/status` from `X-API-Key` policy middleware to prevent Render port scan/health check timeouts.
-- Updated `render.yaml` health check path to `/health`.
-- Populated Railway PostgreSQL database with 500 stations across India, 969 incidents, 247 corrections, 1,023 audit events, 8 settings, and 20,000 active observations and anomaly decisions for cloud operation.
-- Working local prototype is running at http://127.0.0.1:5173; API docs at http://127.0.0.1:8010/docs.
+- Cloud database analysis and Railway PostgreSQL sync: analyzed the 2.3M SQLite row distribution and identified that 1.08M rows are superseded legacy archive samples (`source_version is null`), leaving 1.12M active `archive-regional-v4` observations and 112K simulator samples.
+- Fixed Prediction Audit table on live Render deployment by synchronizing all 12,000 benchmark predictions to Railway PostgreSQL; verified `GET /api/v1/dataset/predictions` returns complete evaluation dataset with ground truth and Isolation Forest scores.
+- Restored authentic operational station states across all 500 stations (422 Normal, 44 Sensor Fault, 10 Genuine Weather, 6 Review, 18 Comms Outage = 96.4% availability) and restored 487 authentic incidents in Railway PostgreSQL.
+- Fixed simulation clock evaluation in `backend/app/main.py`: ensured `heartbeat_snapshot()` references the simulation clock (`1790150400`) rather than wall-clock time (`now()`), preventing false comms timeouts and fake incident generation on cloud container restarts.
+- Populated station latest anomaly decisions (500 stations): verified `GET /api/v1/stations/{id}` returns complete digital twin intervals, physics checks, and diagnostic trees.
+- Working local prototype is running at http://127.0.0.1:5173; API docs at http://127.0.0.1:8010/docs; live Render deployment at https://skyguard-ui.onrender.com.
 - Resume commands: `make setup` then `make dev` if the retained processes have stopped. Do not reset/delete the existing database.
 - User will provide their existing 3D map later. Northern polygons now show Jammu & Kashmir and Ladakh separately using the India-claimed boundary convention; other base polygons remain historical.
 - Completed: connected React UI, FastAPI/SQLAlchemy pipeline, immutability, baseline T/P/RH science, incidents/corrections/reviews, scenarios, offline emulator, reports, model artifacts, plus date-filtered history/comparison/export, monitor console, 500 synthetic stations, a 90-day archive, and a separate 12,000-sample measured ML evaluation.
