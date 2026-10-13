@@ -344,3 +344,9 @@
 - Used a restrained navy/teal/amber palette, consistent Arial typography, native editable connectors and charts, Lucide icons, SIH logo and technology logos. Reduced repeated copy and kept synthetic benchmark limits visible.
 - Rendered and inspected all slides; final Artifact Tool package, layout, chart, font and import checks passed.
 - Final editable file: docs/presentation/redesign/output/SkyGuard-SIH-2026-Reference-Final.pptx. Imported as new Canva design DAHWmutHDWQ: https://www.canva.com/d/7encwDeJ0oAVmYW . Verified six Canva pages.
+
+
+## 2026-10-13 — Repository README refresh
+- Added a concise technology/status line and moved local setup before the detailed architecture so new visitors can start quickly.
+- Added clone instructions and preserved the existing scientific limitations, evaluation provenance, deployment notes, and T/P/RH scope.
+- Documentation-only change; checked setup commands against Makefile. No application tests or deployments were run for this edit.

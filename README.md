@@ -1,5 +1,7 @@
 # SkyGuard
 
+**Weather-station diagnostics · React + FastAPI · SIH prototype**
+
 ### Trustworthy observations from India’s Automatic Weather Station network
 
 **SIH 2026 · Problem SIH26073 · MoES / India Meteorological Department**
@@ -9,6 +11,54 @@ SkyGuard checks whether an AWS reading looks like **normal behaviour, genuine we
 > **In one glance:** Readings → past and peer checks → explained decision → human review when needed.
 
 [Run locally](#-run-it) · [How it works](#-how-it-works) · [What the UI shows](#-what-you-see-in-the-ui) · [Results](#-what-has-been-tested) · [Limits](#-important-limits)
+
+---
+
+## 🚀 Run it
+
+### Requirements
+
+- Node.js 22 or newer
+- [`uv`](https://docs.astral.sh/uv/)
+- Python 3.12 (installed by `uv` when needed)
+
+### Start the dashboard and API
+
+```bash
+git clone https://github.com/Stackforge-07/AWS.git
+cd AWS
+make setup
+make dev
+```
+
+- Dashboard: <http://127.0.0.1:5173>
+- API documentation: <http://127.0.0.1:8010/docs>
+- Local database: `data/skyguard.db` (SQLite)
+- Stop both services with **Ctrl+C**.
+
+On a fresh local database, simulation mode seeds the demo network. It does not connect to IMD. Existing databases are upgraded additively; **do not delete or reset the database just to restart the app**.
+
+To run services separately, use two terminals:
+
+```bash
+make api
+make ui
+```
+
+### Useful project commands
+
+| Command | Purpose |
+|---|---|
+| `make test` | Run Python/API/science/persistence tests and portable C++ edge tests. |
+| `make build` | Type-check and build the React/Vite frontend. |
+| `make train` | Train the synthetic Isolation Forest artifact. |
+| `make evaluate` | Run the original synthetic regression evaluation. |
+| `make expand-dataset` | Add the 500-station, 90-day synthetic archive; stop the API and pause simulation first. |
+| `make evaluate-archive` | Evaluate 12,000 controlled copies of archived samples; does not rewrite raw observations. |
+| `make train-edge` | Train and quantize the separate EdgeGuard model; uses extra TensorFlow dependencies. |
+
+For the full 500-station dataset workflow and its limits, read [docs/EVALUATION.md](docs/EVALUATION.md).
+
 
 ---
 
@@ -117,50 +167,6 @@ The EdgeGuard chart shows its saved **validation reconstruction error** across t
 
 ---
 
-## 🚀 Run it
-
-### Requirements
-
-- Node.js 22 or newer
-- [`uv`](https://docs.astral.sh/uv/)
-- Python 3.12 (installed by `uv` when needed)
-
-### Start the dashboard and API
-
-```bash
-make setup
-make dev
-```
-
-- Dashboard: <http://127.0.0.1:5173>
-- API documentation: <http://127.0.0.1:8010/docs>
-- Local database: `data/skyguard.db` (SQLite)
-- Stop both services with **Ctrl+C**.
-
-On a fresh local database, simulation mode seeds the demo network. It does not connect to IMD. Existing databases are upgraded additively; **do not delete or reset the database just to restart the app**.
-
-To run services separately, use two terminals:
-
-```bash
-make api
-make ui
-```
-
-### Useful project commands
-
-| Command | Purpose |
-|---|---|
-| `make test` | Run Python/API/science/persistence tests and portable C++ edge tests. |
-| `make build` | Type-check and build the React/Vite frontend. |
-| `make train` | Train the synthetic Isolation Forest artifact. |
-| `make evaluate` | Run the original synthetic regression evaluation. |
-| `make expand-dataset` | Add the 500-station, 90-day synthetic archive; stop the API and pause simulation first. |
-| `make evaluate-archive` | Evaluate 12,000 controlled copies of archived samples; does not rewrite raw observations. |
-| `make train-edge` | Train and quantize the separate EdgeGuard model; uses extra TensorFlow dependencies. |
-
-For the full 500-station dataset workflow and its limits, read [docs/EVALUATION.md](docs/EVALUATION.md).
-
----
 
 ## ☁️ Deployment shape
 
